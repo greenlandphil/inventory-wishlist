@@ -33,9 +33,9 @@ def load_products(path: str = "products.json") -> Dict[str, Any]:
 
 
 def best_image(product: Dict[str, Any]) -> Optional[str]:
-    img_local = product.get("main_image_local")
+    #img_local = product.get("main_image_local")
     img_remote = product.get("main_image")
-    return img_local or img_remote
+    return img_remote
 
 
 def get_all_products(data: Dict[str, Any]) -> List[Dict[str, Any]]:
