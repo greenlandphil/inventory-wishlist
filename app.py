@@ -1,18 +1,58 @@
+The app below lets the user add products to the wishlist. Modify the application so that if the user adds the same product to the wishlist multiple times, it shows up on the wishlist once, but indicating how many times that product was selected. On the wishlist page, it should also allow the user to increase or decrease the amount of that specific product. The code for the orginal app is show below:
+
 # app.py
 # -----------------------------------------------------------------------------
-# Piercing Shop Inventory & Wishlist (Streamlit Prototype) — with Quantities
+# Piercing Shop Inventory & Wishlist (Streamlit Prototype)
 #
-# New in this version:
-#   • Wishlist items collapse by (SKU + selections) and track a `quantity`.
-#   • "Add to Wishlist" increments quantity if an identical item already exists.
-#   • Wishlist page shows ➖ / ➕ controls to adjust quantity per item.
-#   • Backward compatible: if an older session stored a list, it is auto-migrated.
+# How to run:
+#   streamlit run app.py
+#
+# This prototype loads product data from `products.json` (same folder).
+# It demonstrates:
+#   - A placeholder Login page
+#   - A Main gallery with tag filtering
+#   - A Product page with dynamic variant selection and variant image preview
+#   - A Wishlist page storing chosen variant combinations per user session
+#
+# ❗ IMPORTANT – Streamlit prototype vs. production web apps:
+# -----------------------------------------------------------------------------
+# • Authentication:
+#   - This app shows a *placeholder* login screen. It does NOT authenticate users.
+#   - Streamlit does not provide a built-in, secure, multi-user auth/session system.
+#   - In production, implement authentication with a proper backend (Django/Flask/FastAPI),
+#     using secure password hashing, server-side sessions (or JWT), CSRF protection,
+#     password resets, SSO/OAuth/OpenID Connect, and role-based access control.
+#
+# • Persistence (wishlist, users, products):
+#   - This prototype saves the wishlist only in `st.session_state` (in-memory per browser
+#     session). It disappears on refresh or on a new device.
+#   - In production, persist user-specific wishlists to a database (e.g., Postgres/MySQL)
+#     keyed to the authenticated user ID. Use an ORM (Django ORM / SQLAlchemy) and
+#     transactions, with proper schema for Products, Variants, and Wishlists.
+#
+# • Concurrency / multi-user:
+#   - Streamlit sessions are isolated per browser connection. There's no concept of
+#     shared user records or transactional writes in this file alone.
+#   - With Django/Flask, implement endpoints and database transactions to support
+#     multiple users simultaneously with data integrity (unique constraints,
+#     foreign keys, optimistic locking where needed).
+#
+# • Business logic (variants, availability, pricing):
+#   - Here we infer/normalize variants from the provided JSON for UI dropdowns.
+#   - In production, you would model Products, VariantAxes (e.g., Length, Color),
+#     VariantOptions, and Variant SKUs explicitly. Also attach price/stock to
+#     concrete combinations. Validate that chosen combinations exist before adding
+#     to a wishlist or cart. Store media in a CDN/S3 and serve signed URLs.
+#
+# • Routing:
+#   - Streamlit is single-file with basic “pseudo-routing” via `st.session_state['page']`.
+#   - In production frameworks, use real routes (e.g., /login, /products, /product/<sku>,
+#     /wishlist) with templates or component-based UIs, plus server-side redirects.
 # -----------------------------------------------------------------------------
 
 import json
 import os
 import re
-import hashlib
 from typing import Dict, List, Any, Optional, Tuple
 
 import streamlit as st
@@ -22,6 +62,12 @@ import streamlit as st
 
 @st.cache_data(show_spinner=False)
 def load_products(path: str = "products.json") -> Dict[str, Any]:
+    """Load and return the entire products JSON.
+
+    In Streamlit, @st.cache_data caches results for the current script state.
+    In production, you'd likely read from a database or an API layer with
+    proper error handling, retries, and observability (logging/metrics).
+    """
     if not os.path.exists(path):
         st.error(
             f"Could not find `{path}`. Make sure it exists next to app.py "
@@ -33,6 +79,7 @@ def load_products(path: str = "products.json") -> Dict[str, Any]:
 
 
 def best_image(product: Dict[str, Any]) -> Optional[str]:
+    """Prefer local image path, fall back to remote URL."""
     img_local = product.get("main_image_local")
     img_remote = product.get("main_image")
     return img_local or img_remote
@@ -67,9 +114,15 @@ _MM_RE = re.compile(r"^\s*\d+(?:\.\d+)?\s*mm\s*$", re.IGNORECASE)
 
 
 def normalize_axis_label(raw_label: str, option_names: List[str]) -> str:
+    """Normalize axis labels (e.g., CZ Color/Crystal Color → Color).
+    If all options look like 'xx mm', label becomes Length/Size.
+    """
     label = (raw_label or "").strip()
+    # If all options look like sizes in mm, prefer Length/Size naming.
     if option_names and all(_MM_RE.match(str(x or "")) for x in option_names):
+        # Choose 'Length' by default for mm values.
         return "Length"
+
     lower = label.lower()
     if lower in {"cz color", "crystal color", "color"}:
         return "Color"
@@ -93,13 +146,29 @@ def _clean_option_name(name: Any) -> str:
 
 
 def build_variant_axes(product: Dict[str, Any]) -> List[Dict[str, Any]]:
+    """Construct UI-friendly axes from product['variants'].
+
+    Returns a list of axes dicts:
+      {
+        "label": "Length",
+        "options": ["8.00mm", "10.00mm"],
+        "image_map": {"Clear": "path/to/img.jpg", ...},
+        "source_blocks": [<indices>],  # which variant blocks contributed
+        "kind": "merged" | "standard" | "color",
+      }
+
+    We merge axes with the same normalized label across blocks to avoid duplicates
+    (e.g., 'Crystal Color' table + 'CZ Color' swatch block).
+    """
     axes_by_label: Dict[str, Dict[str, Any]] = {}
+
     blocks = product.get("variants") or []
     for idx, v in enumerate(blocks):
         vtype = v.get("type")
         if vtype == "standard_variant":
             headers = v.get("headers") or []
             items = v.get("items") or []
+            # For each header, if not a price-like column, collect options and any per-row image mapping.
             for h in headers:
                 if (h or "").strip().lower() in _PRICEY_COLS:
                     continue
@@ -109,6 +178,7 @@ def build_variant_axes(product: Dict[str, Any]) -> List[Dict[str, Any]]:
                     val = _clean_option_name(row.get(h))
                     if val and val not in options_order:
                         options_order.append(val)
+                    # Some rows carry images for a specific column (e.g., Crystal Color).
                     img_local = row.get("image_local")
                     img = row.get("image")
                     if img_local:
@@ -120,6 +190,7 @@ def build_variant_axes(product: Dict[str, Any]) -> List[Dict[str, Any]]:
                     normalized,
                     {"label": normalized, "options": [], "image_map": {}, "source_blocks": [], "kind": "merged"},
                 )
+                # Merge while preserving order
                 for opt in options_order:
                     if opt not in bucket["options"]:
                         bucket["options"].append(opt)
@@ -151,11 +222,20 @@ def build_variant_axes(product: Dict[str, Any]) -> List[Dict[str, Any]]:
             bucket["image_map"].update(image_map)
             bucket["source_blocks"].append(idx)
 
+        # Ignore unknown block types silently for robustness.
+
+    # Stable order: prefer common axes first
     priority = {"Length": 0, "Size": 1, "Gauge": 2, "Color": 3, "Packing Option": 4, "Rack": 5}
     return sorted(axes_by_label.values(), key=lambda ax: (priority.get(ax["label"], 99), ax["label"]))
 
 
 def compute_price_info(product: Dict[str, Any], selections: Dict[str, str]) -> Dict[str, Any]:
+    """Try to find price info in standard_variant rows that match current selections.
+
+    We match within each *standard_variant* block by comparing the selection for any of its
+    non-price headers. If a row matches, we extract 'Price' and 'Price / pc'.
+    This is best-effort; the provided JSON doesn't always encode full combinations.
+    """
     price_info: Dict[str, Any] = {}
     for v in product.get("variants") or []:
         if v.get("type") != "standard_variant":
@@ -165,6 +245,7 @@ def compute_price_info(product: Dict[str, Any], selections: Dict[str, str]) -> D
         if not match_headers:
             continue
         for row in v.get("items") or []:
+            # For a match, all match_headers must equal the selection (if the selection exists)
             ok = True
             for h in match_headers:
                 norm_label = normalize_axis_label(h, [])
@@ -175,33 +256,21 @@ def compute_price_info(product: Dict[str, Any], selections: Dict[str, str]) -> D
                     ok = False
                     break
             if ok:
+                # Extract price fields if they exist
                 if "Price" in row and isinstance(row["Price"], (int, float)):
                     price_info["Price"] = row["Price"]
                 if "Price / pc" in row and isinstance(row["Price / pc"], str):
                     price_info["Price / pc"] = row["Price / pc"]
+                # Break on first matching row per block
                 break
     return price_info
 
 
-# ------------------------------ Wishlist Helpers ------------------------------
-
 def ensure_session_defaults():
     st.session_state.setdefault("page", "login")
-    st.session_state.setdefault("wishlist", {})  # now a dict keyed by item_key
+    st.session_state.setdefault("wishlist", [])
     st.session_state.setdefault("selected_sku", None)
     st.session_state.setdefault("username", "")
-
-    # Backward-compat: migrate old list → dict (quantity=1 each)
-    if isinstance(st.session_state["wishlist"], list):
-        old_list = st.session_state["wishlist"]
-        st.session_state["wishlist"] = {}
-        for it in old_list:
-            # treat each legacy entry as quantity 1
-            key = make_item_key(it.get("sku"), it.get("selections") or {})
-            st.session_state["wishlist"][key] = {
-                **it,
-                "quantity": st.session_state["wishlist"].get(key, {}).get("quantity", 0) + 1,
-            }
 
 
 def set_page(page_name: str):
@@ -214,84 +283,20 @@ def go_product(sku: str):
     set_page("product")
 
 
-def selections_key(selections: Dict[str, str]) -> str:
-    # stable order key: "Color:Blue|Length:8.00mm"
-    if not selections:
-        return ""
-    parts = [f"{k}:{v}" for k, v in sorted(selections.items(), key=lambda kv: kv[0].lower())]
-    return "|".join(parts)
-
-
-def make_item_key(sku: Optional[str], selections: Dict[str, str]) -> str:
-    base = f"{sku or ''}||{selections_key(selections)}"
-    # compact, safe key for Streamlit widget IDs
-    return hashlib.md5(base.encode("utf-8")).hexdigest()
-
-
-def wishlist_counts() -> Tuple[int, int]:
-    """Return (unique_lines, total_quantity)."""
-    wl = st.session_state.get("wishlist", {})
-    if not isinstance(wl, dict):
-        return (len(wl), len(wl))
-    unique = len(wl)
-    total_qty = sum(int(v.get("quantity", 1)) for v in wl.values())
-    return unique, total_qty
-
-
-def wishlist_add(item: Dict[str, Any]):
-    """Add or increment an item (by SKU + selections)."""
-    wl: Dict[str, Dict[str, Any]] = st.session_state["wishlist"]
-    key = make_item_key(item.get("sku"), item.get("selections") or {})
-    if key in wl:
-        wl[key]["quantity"] = int(wl[key].get("quantity", 1)) + 1
-        # keep latest price/variant image if you prefer; or preserve original
-        wl[key]["price_info"] = item.get("price_info") or wl[key].get("price_info")
-        wl[key]["variant_image"] = item.get("variant_image") or wl[key].get("variant_image")
-    else:
-        wl[key] = {**item, "quantity": 1}
-    st.session_state["wishlist"] = wl
-
-
-def wishlist_inc(key: str):
-    wl: Dict[str, Dict[str, Any]] = st.session_state.get("wishlist", {})
-    if key in wl:
-        wl[key]["quantity"] = int(wl[key].get("quantity", 1)) + 1
-        st.session_state["wishlist"] = wl
-        st.rerun()
-
-
-def wishlist_dec(key: str):
-    wl: Dict[str, Dict[str, Any]] = st.session_state.get("wishlist", {})
-    if key in wl:
-        new_q = int(wl[key].get("quantity", 1)) - 1
-        if new_q <= 0:
-            del wl[key]
-        else:
-            wl[key]["quantity"] = new_q
-        st.session_state["wishlist"] = wl
-        st.rerun()
-
-
-def wishlist_remove(key: str):
-    wl: Dict[str, Dict[str, Any]] = st.session_state.get("wishlist", {})
-    if key in wl:
-        del wl[key]
-        st.session_state["wishlist"] = wl
-        st.rerun()
-
-
 # ------------------------------ UI Components ---------------------------------
 
 
 def top_nav(products_count: int):
+    """Header with app title and Wishlist button. Visible on all pages except login."""
     if st.session_state.get("page") == "login":
         return
-    unique, total_qty = wishlist_counts()
     left, right = st.columns([3, 1])
     with left:
-        st.markdown(f"### Piercing Shop Inventory — {products_count} products")
+        st.markdown(
+            f"### Piercing Shop Inventory — {products_count} products"
+        )
     with right:
-        if st.button(f"🧾 Wishlist ({unique})", use_container_width=True):
+        if st.button(f"🧾 Wishlist ({len(st.session_state['wishlist'])})", use_container_width=True):
             set_page("wishlist")
 
 
@@ -351,31 +356,31 @@ def render_product_page(product: Dict[str, Any]):
         label = ax["label"]
         options = ax["options"] or ["Unspecified"]
         key = f"sel_{product.get('sku')}_{label}"
+        # Default to the first option
+        default_index = 0
         if key not in st.session_state:
-            st.session_state[key] = options[0]
-        chosen = st.selectbox(
-            label,
-            options,
-            index=options.index(st.session_state[key]) if st.session_state[key] in options else 0,
-            key=key,
-        )
+            st.session_state[key] = options[default_index]
+        chosen = st.selectbox(label, options, index=options.index(st.session_state[key]) if st.session_state[key] in options else 0, key=key)
         selections[label] = chosen
+        # Collect variant-specific image if present
         img_map = ax.get("image_map") or {}
         vimg = img_map.get(chosen)
         if vimg:
             variant_preview_images.append(vimg)
 
+    # Show the first variant preview image (if any)
     if variant_preview_images:
         st.image(variant_preview_images[0], caption="Selected option preview", use_column_width=False)
 
+    # Optional: show price info if the selected combination maps to a priced row
     price_info = compute_price_info(product, selections)
     if price_info:
         st.markdown("**Price info (from selection):**")
         for k, v in price_info.items():
             st.write(f"- {k}: {v}")
 
-    # Add to wishlist (now increments quantity if same SKU+selections exist)
-    def on_add():
+    # Add to wishlist
+    def add_to_wishlist():
         item = {
             "sku": product.get("sku"),
             "title": product.get("title") or product.get("sku"),
@@ -385,33 +390,29 @@ def render_product_page(product: Dict[str, Any]):
             "variant_image": variant_preview_images[0] if variant_preview_images else None,
             "price_info": price_info,
         }
-        wishlist_add(item)
+        st.session_state["wishlist"].append(item)
         st.success("Added to wishlist!")
 
-    st.button("➕ Add to Wishlist", type="primary", on_click=on_add)
+    st.button("➕ Add to Wishlist", type="primary", on_click=add_to_wishlist)
 
 
 def render_wishlist():
     st.button("← Back to Gallery", on_click=lambda: set_page("main"))
     st.header("Your Wishlist")
 
+    # Developer note about persistence:
     st.info(
         "Prototype note: Wishlist lives only in this browser session via `st.session_state`.\n\n"
         "In a production Django/Flask app, you'd persist wishlists to a database (e.g., Postgres) "
         "linked to the authenticated user, so they survive refresh and are available across devices."
     )
 
-    wl: Dict[str, Dict[str, Any]] = st.session_state.get("wishlist", {})
-    if not wl:
+    items = st.session_state.get("wishlist", [])
+    if not items:
         st.write("Your wishlist is empty.")
         return
 
-    unique, total_qty = wishlist_counts()
-    st.caption(f"**Unique lines:** {unique} | **Total quantity selected:** {total_qty}")
-
-    # Render each line (quantity-aware)
-    for key, item in wl.items():
-        qty = int(item.get("quantity", 1))
+    for i, item in enumerate(items):
         with st.container(border=True):
             cols = st.columns([1, 3, 1])
             with cols[0]:
@@ -427,21 +428,14 @@ def render_wishlist():
                         st.write(f"- {k}: {v}")
                 if item.get("price_info"):
                     st.write("**Price info:**")
-                    for k2, v2 in item["price_info"].items():
-                        st.write(f"- {k2}: {v2}")
+                    for k, v in item["price_info"].items():
+                        st.write(f"- {k}: {v}")
                 if item.get("url"):
                     st.link_button("Open product page", item["url"])
             with cols[2]:
-                # Quantity controls
-                qcols = st.columns([1, 1, 2])
-                with qcols[0]:
-                    st.button("➖", key=f"dec_{key}", use_container_width=True, on_click=wishlist_dec, args=(key,))
-                with qcols[1]:
-                    st.button("➕", key=f"inc_{key}", use_container_width=True, on_click=wishlist_inc, args=(key,))
-                with qcols[2]:
-                    st.markdown(f"**Qty:** {qty}")
-                st.divider()
-                st.button("Remove line", key=f"remove_{key}", use_container_width=True, on_click=wishlist_remove, args=(key,))
+                if st.button("Remove", key=f"remove_{i}", use_container_width=True):
+                    del st.session_state["wishlist"][i]
+                    st.rerun()
 
 
 # ------------------------------ Pages -----------------------------------------
@@ -449,14 +443,24 @@ def render_wishlist():
 
 def page_login():
     st.title("🔐 Employee Login (Placeholder)")
+
+    # This is a **placeholder**. It does not authenticate the user!
+    # In production (Django/Flask/FastAPI):
+    #   • Validate credentials against a user store (DB with hashed passwords).
+    #   • Create a server-side session or issue a signed JWT.
+    #   • Set secure cookies (HttpOnly, Secure, SameSite) and enforce CSRF protection.
+    #   • Implement password reset and multi-factor authentication where appropriate.
     username = st.text_input("Username")
     password = st.text_input("Password", type="password")
 
     if st.button("Login", type="primary"):
+        # We accept anything and "log in".
         st.session_state["username"] = username.strip() or "Demo User"
         set_page("main")
 
-    st.caption("This login screen is a demo. A real app requires a secure authentication backend.")
+    st.caption(
+        "This login screen is a demo. A real app requires a secure authentication backend."
+    )
 
 
 def page_main(data: Dict[str, Any]):
@@ -485,8 +489,8 @@ def page_product(data: Dict[str, Any]):
 
 
 def page_wishlist(data: Dict[str, Any]):
-    _ = get_all_products(data)  # not used directly here, but kept for parity
-    top_nav(len(_))
+    products = get_all_products(data)
+    top_nav(len(products))
     render_wishlist()
 
 
@@ -495,8 +499,10 @@ def page_wishlist(data: Dict[str, Any]):
 
 def main():
     ensure_session_defaults()
+
     data = load_products("products.json")
 
+    # Global sidebar navigation (except on login) for convenience
     if st.session_state.get("page") != "login":
         with st.sidebar.expander("Navigation", expanded=True):
             if st.button("🏠 Main Page", use_container_width=True):
@@ -519,3 +525,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+ 
