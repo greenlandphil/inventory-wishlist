@@ -1,0 +1,3397 @@
+{
+  "metadata": {
+    "scraped_at": "2025-08-10T13:09:06.895745",
+    "total_products": 57,
+    "source": "International Silver",
+    "scraper_version": "unified_v2.0",
+    "base_url": "https://www.international-silver.com"
+  },
+  "products": [
+    {
+      "sku": "ABNEAJB4",
+      "url": "https://www.international-silver.com/en__/abneajb4",
+      "scraped_at": "2025-08-10T13:04:39.637224",
+      "title": "Acrylic eyebrow banana w 4mm balls w bezel set crystals",
+      "description": "Flexi clear PTFE curved barbell 16g /1.2mm with two 4mm balls with press fit gems",
+      "tags": [
+        "Micro Curved Barbells",
+        "Acrylic Body Jewelry",
+        "Per Piece",
+        "16g (1.2mm)"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/abneajb4_acrylic_eyebrow_banana_w_4mm_balls_w_bezel_set_crystals.jpg",
+      "main_image_local": "images/abneajb4/abneajb4_main.jpg",
+      "variants": [
+        {
+          "type": "standard_variant",
+          "label": "ABNEAJB4",
+          "headers": [
+            "Length"
+          ],
+          "items": [
+            {
+              "Length": "8.00mm"
+            },
+            {
+              "Length": "10.00mm"
+            }
+          ]
+        },
+        {
+          "type": "color_variant",
+          "label": "CZ Color",
+          "options": [
+            {
+              "name": "Clear",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/c/l/clear.gif",
+              "image_local": "images/abneajb4/abneajb4_clear.jpg"
+            },
+            {
+              "name": "AB",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/b/ab_2.png",
+              "image_local": "images/abneajb4/abneajb4_ab.jpg"
+            },
+            {
+              "name": "Rose",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/r/o/rose.gif",
+              "image_local": "images/abneajb4/abneajb4_rose.jpg"
+            },
+            {
+              "name": "Light Sapphire",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-sapphire.png",
+              "image_local": "images/abneajb4/abneajb4_light_sapphire.jpg"
+            },
+            {
+              "name": "Sapphire",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/s/a/sapphire.gif",
+              "image_local": "images/abneajb4/abneajb4_sapphire.jpg"
+            },
+            {
+              "name": "Aquamarine",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/q/aquamarine.png",
+              "image_local": "images/abneajb4/abneajb4_aquamarine.jpg"
+            },
+            {
+              "name": "Blue Zircon",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/b/l/blue-zircon.gif",
+              "image_local": "images/abneajb4/abneajb4_blue_zircon.jpg"
+            },
+            {
+              "name": "Capri Blue",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/c/a/capri-blue.png",
+              "image_local": "images/abneajb4/abneajb4_capri_blue.jpg"
+            },
+            {
+              "name": "Light Amethyst",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-amethyst.png",
+              "image_local": "images/abneajb4/abneajb4_light_amethyst.jpg"
+            },
+            {
+              "name": "Amethyst",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/m/amethyst.png",
+              "image_local": "images/abneajb4/abneajb4_amethyst.jpg"
+            },
+            {
+              "name": "Jet",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/j/e/jet.gif",
+              "image_local": "images/abneajb4/abneajb4_jet.jpg"
+            },
+            {
+              "name": "Fuchsia",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/f/u/fuchsia.gif",
+              "image_local": "images/abneajb4/abneajb4_fuchsia.jpg"
+            },
+            {
+              "name": "Light Siam",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-siam.png",
+              "image_local": "images/abneajb4/abneajb4_light_siam.jpg"
+            },
+            {
+              "name": "Hyacinth",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/h/y/hyacinth.png",
+              "image_local": "images/abneajb4/abneajb4_hyacinth.jpg"
+            },
+            {
+              "name": "Citrine",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/c/i/citrine.png",
+              "image_local": "images/abneajb4/abneajb4_citrine.jpg"
+            },
+            {
+              "name": "Topaz",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/t/o/topaz.gif",
+              "image_local": "images/abneajb4/abneajb4_topaz.jpg"
+            },
+            {
+              "name": "Peridot",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/p/e/peridot.png",
+              "image_local": "images/abneajb4/abneajb4_peridot.jpg"
+            },
+            {
+              "name": "Emerald",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/e/m/emerald.png",
+              "image_local": "images/abneajb4/abneajb4_emerald.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "BBNPD8",
+      "url": "https://www.international-silver.com/en__/bbnpd8",
+      "scraped_at": "2025-08-10T13:04:47.455065",
+      "title": "316L steel nipple barbell with snake w/ crystal eyes",
+      "description": "Surgical steel barbell for the nipple 14g/1.6mm with a snake with gem eyes. Length 5/8\"-16mm",
+      "tags": [
+        "Straight Barbells",
+        "Surgical Steel 316L",
+        "Per Piece",
+        "14g (1.6mm)"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/bbnpd8_straight_barbells_surgical_steel_316l_nipple.jpg",
+      "main_image_local": "images/bbnpd8/bbnpd8_main.jpg",
+      "variants": [
+        {
+          "type": "standard_variant",
+          "label": "BBNPD8",
+          "headers": [
+            "Crystal Color"
+          ],
+          "items": [
+            {
+              "Crystal Color": "Clear",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/c/l/clear.gif",
+              "image_local": "images/bbnpd8/bbnpd8_variant_1.jpg"
+            },
+            {
+              "Crystal Color": "AB",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/b/ab_2.png",
+              "image_local": "images/bbnpd8/bbnpd8_variant_2.jpg"
+            },
+            {
+              "Crystal Color": "Rose",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/r/o/rose.gif",
+              "image_local": "images/bbnpd8/bbnpd8_variant_3.jpg"
+            },
+            {
+              "Crystal Color": "Light Sapphire",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-sapphire.png",
+              "image_local": "images/bbnpd8/bbnpd8_variant_4.jpg"
+            },
+            {
+              "Crystal Color": "Sapphire",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/s/a/sapphire.gif",
+              "image_local": "images/bbnpd8/bbnpd8_variant_5.jpg"
+            },
+            {
+              "Crystal Color": "Aquamarine",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/q/aquamarine.png",
+              "image_local": "images/bbnpd8/bbnpd8_variant_6.jpg"
+            },
+            {
+              "Crystal Color": "Blue Zircon",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/b/l/blue-zircon.gif",
+              "image_local": "images/bbnpd8/bbnpd8_variant_7.jpg"
+            },
+            {
+              "Crystal Color": "Light Amethyst",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-amethyst.png",
+              "image_local": "images/bbnpd8/bbnpd8_variant_8.jpg"
+            },
+            {
+              "Crystal Color": "Amethyst",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/m/amethyst.png",
+              "image_local": "images/bbnpd8/bbnpd8_variant_9.jpg"
+            },
+            {
+              "Crystal Color": "Jet",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/j/e/jet.gif",
+              "image_local": "images/bbnpd8/bbnpd8_variant_10.jpg"
+            },
+            {
+              "Crystal Color": "Fuchsia",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/f/u/fuchsia.gif",
+              "image_local": "images/bbnpd8/bbnpd8_variant_11.jpg"
+            },
+            {
+              "Crystal Color": "Light Siam",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-siam.png",
+              "image_local": "images/bbnpd8/bbnpd8_variant_12.jpg"
+            },
+            {
+              "Crystal Color": "Topaz",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/t/o/topaz.gif",
+              "image_local": "images/bbnpd8/bbnpd8_variant_13.jpg"
+            },
+            {
+              "Crystal Color": "Peridot",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/p/e/peridot.png",
+              "image_local": "images/bbnpd8/bbnpd8_variant_14.jpg"
+            },
+            {
+              "Crystal Color": "Emerald",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/e/m/emerald.png",
+              "image_local": "images/bbnpd8/bbnpd8_variant_15.jpg"
+            }
+          ]
+        },
+        {
+          "type": "color_variant",
+          "label": "CZ Color",
+          "options": [
+            {
+              "name": "",
+              "image": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "BLCP516",
+      "url": "https://www.international-silver.com/en__/blcp516",
+      "scraped_at": "2025-08-10T13:04:52.709880",
+      "title": "Fake belly clip w a dangling french mustache design",
+      "description": "Cheater fake belly ring clip with a downward mustache dangling part",
+      "tags": [
+        "Fake/Illusion Hoops",
+        "Others",
+        "Per Piece"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/blcp516_fake_illusion_body_jewelry_others_belly_button.jpg",
+      "main_image_local": "images/blcp516/blcp516_main.jpg",
+      "variants": [
+        {
+          "type": "standard_variant",
+          "label": "BLCP516",
+          "headers": [
+            "Packing Option"
+          ],
+          "items": [
+            {
+              "Packing Option": "Blister package"
+            },
+            {
+              "Packing Option": "Extra-Thin package to save shipping cost"
+            }
+          ]
+        },
+        {
+          "type": "color_variant",
+          "label": "CZ Color",
+          "options": [
+            {
+              "name": "",
+              "image": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "BLCP517",
+      "url": "https://www.international-silver.com/en__/blcp517",
+      "scraped_at": "2025-08-10T13:04:56.934756",
+      "title": "Fake belly clip w a dangling happy mustache design",
+      "description": "Cheater fake belly ring clip with a mustache dangling part",
+      "tags": [
+        "Fake/Illusion Hoops",
+        "Others",
+        "Per Piece"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/blcp517_fake_illusion_body_jewelry_others_belly_button.jpg",
+      "main_image_local": "images/blcp517/blcp517_main.jpg",
+      "variants": [
+        {
+          "type": "standard_variant",
+          "label": "BLCP517",
+          "headers": [
+            "Packing Option"
+          ],
+          "items": [
+            {
+              "Packing Option": "Blister package"
+            },
+            {
+              "Packing Option": "Extra-Thin package to save shipping cost"
+            }
+          ]
+        },
+        {
+          "type": "color_variant",
+          "label": "CZ Color",
+          "options": [
+            {
+              "name": "",
+              "image": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "BLCP519",
+      "url": "https://www.international-silver.com/en__/blcp519",
+      "scraped_at": "2025-08-10T13:05:01.163089",
+      "title": "Fake belly clip w a dangling mustache design",
+      "description": "Cheater fake belly ring clip with an upward mustache dangling part",
+      "tags": [
+        "Fake/Illusion Hoops",
+        "Others",
+        "Per Piece"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/blcp519_fake_illusion_body_jewelry_others_belly_button.jpg",
+      "main_image_local": "images/blcp519/blcp519_main.jpg",
+      "variants": [
+        {
+          "type": "standard_variant",
+          "label": "BLCP519",
+          "headers": [
+            "Packing Option"
+          ],
+          "items": [
+            {
+              "Packing Option": "Blister package"
+            },
+            {
+              "Packing Option": "Extra-Thin package to save shipping cost"
+            }
+          ]
+        },
+        {
+          "type": "color_variant",
+          "label": "CZ Color",
+          "options": [
+            {
+              "name": "",
+              "image": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "BLCP626",
+      "url": "https://www.international-silver.com/en__/blcp626",
+      "scraped_at": "2025-08-10T13:05:05.391745",
+      "title": "Fake belly clip w dangling 8mm ferido multi crystal ball",
+      "description": "Cheater fake belly ring clip with an 8mm ferido glued multi gems ball covered with resin",
+      "tags": [
+        "Fake/Illusion Hoops",
+        "Others",
+        "Per Piece",
+        "Ferido"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/blcp626_fake_illusion_body_jewelry_others_belly_button.jpg",
+      "main_image_local": "images/blcp626/blcp626_main.jpg",
+      "variants": [
+        {
+          "type": "standard_variant",
+          "label": "BLCP626",
+          "headers": [
+            "Packing Option"
+          ],
+          "items": [
+            {
+              "Packing Option": "Blister package"
+            },
+            {
+              "Packing Option": "Extra-Thin package to save shipping cost"
+            }
+          ]
+        },
+        {
+          "type": "color_variant",
+          "label": "CZ Color",
+          "options": [
+            {
+              "name": "Clear",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/c/l/clear.gif",
+              "image_local": "images/blcp626/blcp626_clear.jpg"
+            },
+            {
+              "name": "AB",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/b/ab_2.png",
+              "image_local": "images/blcp626/blcp626_ab.jpg"
+            },
+            {
+              "name": "Rose",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/r/o/rose.gif",
+              "image_local": "images/blcp626/blcp626_rose.jpg"
+            },
+            {
+              "name": "Light Sapphire",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-sapphire.png",
+              "image_local": "images/blcp626/blcp626_light_sapphire.jpg"
+            },
+            {
+              "name": "Sapphire",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/s/a/sapphire.gif",
+              "image_local": "images/blcp626/blcp626_sapphire.jpg"
+            },
+            {
+              "name": "Aquamarine",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/q/aquamarine.png",
+              "image_local": "images/blcp626/blcp626_aquamarine.jpg"
+            },
+            {
+              "name": "Blue Zircon",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/b/l/blue-zircon.gif",
+              "image_local": "images/blcp626/blcp626_blue_zircon.jpg"
+            },
+            {
+              "name": "Light Amethyst",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-amethyst.png",
+              "image_local": "images/blcp626/blcp626_light_amethyst.jpg"
+            },
+            {
+              "name": "Amethyst",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/m/amethyst.png",
+              "image_local": "images/blcp626/blcp626_amethyst.jpg"
+            },
+            {
+              "name": "Jet",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/j/e/jet.gif",
+              "image_local": "images/blcp626/blcp626_jet.jpg"
+            },
+            {
+              "name": "Fuchsia",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/f/u/fuchsia.gif",
+              "image_local": "images/blcp626/blcp626_fuchsia.jpg"
+            },
+            {
+              "name": "Light Siam",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-siam.png",
+              "image_local": "images/blcp626/blcp626_light_siam.jpg"
+            },
+            {
+              "name": "Hyacinth",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/h/y/hyacinth.png",
+              "image_local": "images/blcp626/blcp626_hyacinth.jpg"
+            },
+            {
+              "name": "Topaz",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/t/o/topaz.gif",
+              "image_local": "images/blcp626/blcp626_topaz.jpg"
+            },
+            {
+              "name": "Peridot",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/p/e/peridot.png",
+              "image_local": "images/blcp626/blcp626_peridot.jpg"
+            },
+            {
+              "name": "Emerald",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/e/m/emerald.png",
+              "image_local": "images/blcp626/blcp626_emerald.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "BLCP643",
+      "url": "https://www.international-silver.com/en__/blcp643",
+      "scraped_at": "2025-08-10T13:05:09.841648",
+      "title": "Non piercing fake belly clip with a dangling star fish",
+      "description": "Cheater fake belly ring clip with a starfish dangling part",
+      "tags": [
+        "Fake/Illusion Hoops",
+        "Others",
+        "Per Piece"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/blcp643_fake_illusion_body_jewelry_others_belly_button.jpg",
+      "main_image_local": "images/blcp643/blcp643_main.jpg",
+      "variants": [
+        {
+          "type": "standard_variant",
+          "label": "BLCP643",
+          "headers": [
+            "Packing Option"
+          ],
+          "items": [
+            {
+              "Packing Option": "Blister package"
+            },
+            {
+              "Packing Option": "Extra-Thin package to save shipping cost"
+            }
+          ]
+        },
+        {
+          "type": "color_variant",
+          "label": "CZ Color",
+          "options": [
+            {
+              "name": "Clear",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/c/l/clear.gif",
+              "image_local": "images/blcp643/blcp643_clear.jpg"
+            },
+            {
+              "name": "AB",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/b/ab_2.png",
+              "image_local": "images/blcp643/blcp643_ab.jpg"
+            },
+            {
+              "name": "Rose",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/r/o/rose.gif",
+              "image_local": "images/blcp643/blcp643_rose.jpg"
+            },
+            {
+              "name": "Light Sapphire",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-sapphire.png",
+              "image_local": "images/blcp643/blcp643_light_sapphire.jpg"
+            },
+            {
+              "name": "Sapphire",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/s/a/sapphire.gif",
+              "image_local": "images/blcp643/blcp643_sapphire.jpg"
+            },
+            {
+              "name": "Aquamarine",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/q/aquamarine.png",
+              "image_local": "images/blcp643/blcp643_aquamarine.jpg"
+            },
+            {
+              "name": "Blue Zircon",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/b/l/blue-zircon.gif",
+              "image_local": "images/blcp643/blcp643_blue_zircon.jpg"
+            },
+            {
+              "name": "Capri Blue",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/c/a/capri-blue.png",
+              "image_local": "images/blcp643/blcp643_capri_blue.jpg"
+            },
+            {
+              "name": "Light Amethyst",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-amethyst.png",
+              "image_local": "images/blcp643/blcp643_light_amethyst.jpg"
+            },
+            {
+              "name": "Amethyst",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/m/amethyst.png",
+              "image_local": "images/blcp643/blcp643_amethyst.jpg"
+            },
+            {
+              "name": "Jet",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/j/e/jet.gif",
+              "image_local": "images/blcp643/blcp643_jet.jpg"
+            },
+            {
+              "name": "Fuchsia",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/f/u/fuchsia.gif",
+              "image_local": "images/blcp643/blcp643_fuchsia.jpg"
+            },
+            {
+              "name": "Light Siam",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-siam.png",
+              "image_local": "images/blcp643/blcp643_light_siam.jpg"
+            },
+            {
+              "name": "Hyacinth",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/h/y/hyacinth.png",
+              "image_local": "images/blcp643/blcp643_hyacinth.jpg"
+            },
+            {
+              "name": "Citrine",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/c/i/citrine.png",
+              "image_local": "images/blcp643/blcp643_citrine.jpg"
+            },
+            {
+              "name": "Topaz",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/t/o/topaz.gif",
+              "image_local": "images/blcp643/blcp643_topaz.jpg"
+            },
+            {
+              "name": "Peridot",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/p/e/peridot.png",
+              "image_local": "images/blcp643/blcp643_peridot.jpg"
+            },
+            {
+              "name": "Emerald",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/e/m/emerald.png",
+              "image_local": "images/blcp643/blcp643_emerald.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "BLCP699",
+      "url": "https://www.international-silver.com/en__/blcp699",
+      "scraped_at": "2025-08-10T13:05:15.613083",
+      "title": "Non piercing fake belly clip w a anchor w rope design",
+      "description": "Non piercing fake belly clip with a dangling plain anchor with rope design(dangling is made from silver plating brass) (1 piece in blister pack or extra thin package to save on shipping cost)",
+      "tags": [
+        "Fake/Illusion Hoops",
+        "Others",
+        "Per Piece"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/blcp699_fake_illusion_body_jewelry_others_belly_button.jpg",
+      "main_image_local": "images/blcp699/blcp699_main.jpg",
+      "variants": [
+        {
+          "type": "standard_variant",
+          "label": "BLCP699",
+          "headers": [
+            "Packing Option"
+          ],
+          "items": [
+            {
+              "Packing Option": "Blister package"
+            },
+            {
+              "Packing Option": "Extra-Thin package to save shipping cost"
+            }
+          ]
+        },
+        {
+          "type": "color_variant",
+          "label": "CZ Color",
+          "options": [
+            {
+              "name": "",
+              "image": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "BLCP723",
+      "url": "https://www.international-silver.com/en__/blcp723",
+      "scraped_at": "2025-08-10T13:05:21.210300",
+      "title": "Fake belly clip w a dangling moon w the star w crystals",
+      "description": "Cheater fake belly ring clip with a star and moon studded with gems",
+      "tags": [
+        "Fake/Illusion Hoops",
+        "Others",
+        "Per Piece"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/blcp723_fake_illusion_body_jewelry_others_belly_button.jpg",
+      "main_image_local": "images/blcp723/blcp723_main.jpg",
+      "variants": [
+        {
+          "type": "standard_variant",
+          "label": "BLCP723",
+          "headers": [
+            "Packing Option"
+          ],
+          "items": [
+            {
+              "Packing Option": "Blister package"
+            },
+            {
+              "Packing Option": "Extra-Thin package to save shipping cost"
+            }
+          ]
+        },
+        {
+          "type": "color_variant",
+          "label": "CZ Color",
+          "options": [
+            {
+              "name": "Clear",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/c/l/clear.gif",
+              "image_local": "images/blcp723/blcp723_clear.jpg"
+            },
+            {
+              "name": "AB",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/b/ab_2.png",
+              "image_local": "images/blcp723/blcp723_ab.jpg"
+            },
+            {
+              "name": "Rose",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/r/o/rose.gif",
+              "image_local": "images/blcp723/blcp723_rose.jpg"
+            },
+            {
+              "name": "Light Sapphire",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-sapphire.png",
+              "image_local": "images/blcp723/blcp723_light_sapphire.jpg"
+            },
+            {
+              "name": "Sapphire",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/s/a/sapphire.gif",
+              "image_local": "images/blcp723/blcp723_sapphire.jpg"
+            },
+            {
+              "name": "Aquamarine",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/q/aquamarine.png",
+              "image_local": "images/blcp723/blcp723_aquamarine.jpg"
+            },
+            {
+              "name": "Blue Zircon",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/b/l/blue-zircon.gif",
+              "image_local": "images/blcp723/blcp723_blue_zircon.jpg"
+            },
+            {
+              "name": "Capri Blue",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/c/a/capri-blue.png",
+              "image_local": "images/blcp723/blcp723_capri_blue.jpg"
+            },
+            {
+              "name": "Light Amethyst",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-amethyst.png",
+              "image_local": "images/blcp723/blcp723_light_amethyst.jpg"
+            },
+            {
+              "name": "Amethyst",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/m/amethyst.png",
+              "image_local": "images/blcp723/blcp723_amethyst.jpg"
+            },
+            {
+              "name": "Jet",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/j/e/jet.gif",
+              "image_local": "images/blcp723/blcp723_jet.jpg"
+            },
+            {
+              "name": "Fuchsia",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/f/u/fuchsia.gif",
+              "image_local": "images/blcp723/blcp723_fuchsia.jpg"
+            },
+            {
+              "name": "Light Siam",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-siam.png",
+              "image_local": "images/blcp723/blcp723_light_siam.jpg"
+            },
+            {
+              "name": "Hyacinth",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/h/y/hyacinth.png",
+              "image_local": "images/blcp723/blcp723_hyacinth.jpg"
+            },
+            {
+              "name": "Citrine",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/c/i/citrine.png",
+              "image_local": "images/blcp723/blcp723_citrine.jpg"
+            },
+            {
+              "name": "Topaz",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/t/o/topaz.gif",
+              "image_local": "images/blcp723/blcp723_topaz.jpg"
+            },
+            {
+              "name": "Peridot",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/p/e/peridot.png",
+              "image_local": "images/blcp723/blcp723_peridot.jpg"
+            },
+            {
+              "name": "Emerald",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/e/m/emerald.png",
+              "image_local": "images/blcp723/blcp723_emerald.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "BLCP726",
+      "url": "https://www.international-silver.com/en__/blcp726",
+      "scraped_at": "2025-08-10T13:05:26.199107",
+      "title": "Fake belly clip w a dangling moon&sun",
+      "description": "Cheater fake belly ring clip with a half-moon and sun dangling part",
+      "tags": [
+        "Fake/Illusion Hoops",
+        "Others",
+        "Per Piece"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/blcp726_fake_illusion_body_jewelry_others_belly_button.jpg",
+      "main_image_local": "images/blcp726/blcp726_main.jpg",
+      "variants": [
+        {
+          "type": "standard_variant",
+          "label": "BLCP726",
+          "headers": [
+            "Packing Option"
+          ],
+          "items": [
+            {
+              "Packing Option": "Blister package"
+            },
+            {
+              "Packing Option": "Extra-Thin package to save shipping cost"
+            }
+          ]
+        },
+        {
+          "type": "color_variant",
+          "label": "CZ Color",
+          "options": [
+            {
+              "name": "",
+              "image": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "BLCP728",
+      "url": "https://www.international-silver.com/en__/blcp728",
+      "scraped_at": "2025-08-10T13:05:30.738694",
+      "title": "Fake belly clip w dangling snake w crystals at the eyes",
+      "description": "Non piercing fake belly clip with rhodium plating dangling snake with crystal eyes(dangling part is made from silver plating brass) (1 piece in blister pack or extra thin package to save on shipping cost)",
+      "tags": [
+        "Fake/Illusion Body Jewelry",
+        "Others",
+        "Per Piece"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/blcp728_fake_illusion_body_jewelry_others_belly_button.jpg",
+      "main_image_local": "images/blcp728/blcp728_main.jpg",
+      "variants": [
+        {
+          "type": "standard_variant",
+          "label": "BLCP728",
+          "headers": [
+            "Packing Option"
+          ],
+          "items": [
+            {
+              "Packing Option": "Blister package"
+            },
+            {
+              "Packing Option": "Extra-Thin package to save shipping cost"
+            }
+          ]
+        },
+        {
+          "type": "color_variant",
+          "label": "CZ Color",
+          "options": [
+            {
+              "name": "Clear",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/c/l/clear.gif",
+              "image_local": "images/blcp728/blcp728_clear.jpg"
+            },
+            {
+              "name": "AB",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/b/ab_2.png",
+              "image_local": "images/blcp728/blcp728_ab.jpg"
+            },
+            {
+              "name": "Rose",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/r/o/rose.gif",
+              "image_local": "images/blcp728/blcp728_rose.jpg"
+            },
+            {
+              "name": "Light Sapphire",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-sapphire.png",
+              "image_local": "images/blcp728/blcp728_light_sapphire.jpg"
+            },
+            {
+              "name": "Sapphire",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/s/a/sapphire.gif",
+              "image_local": "images/blcp728/blcp728_sapphire.jpg"
+            },
+            {
+              "name": "Aquamarine",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/q/aquamarine.png",
+              "image_local": "images/blcp728/blcp728_aquamarine.jpg"
+            },
+            {
+              "name": "Blue Zircon",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/b/l/blue-zircon.gif",
+              "image_local": "images/blcp728/blcp728_blue_zircon.jpg"
+            },
+            {
+              "name": "Capri Blue",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/c/a/capri-blue.png",
+              "image_local": "images/blcp728/blcp728_capri_blue.jpg"
+            },
+            {
+              "name": "Light Amethyst",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-amethyst.png",
+              "image_local": "images/blcp728/blcp728_light_amethyst.jpg"
+            },
+            {
+              "name": "Amethyst",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/m/amethyst.png",
+              "image_local": "images/blcp728/blcp728_amethyst.jpg"
+            },
+            {
+              "name": "Jet",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/j/e/jet.gif",
+              "image_local": "images/blcp728/blcp728_jet.jpg"
+            },
+            {
+              "name": "Fuchsia",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/f/u/fuchsia.gif",
+              "image_local": "images/blcp728/blcp728_fuchsia.jpg"
+            },
+            {
+              "name": "Light Siam",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-siam.png",
+              "image_local": "images/blcp728/blcp728_light_siam.jpg"
+            },
+            {
+              "name": "Hyacinth",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/h/y/hyacinth.png",
+              "image_local": "images/blcp728/blcp728_hyacinth.jpg"
+            },
+            {
+              "name": "Citrine",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/c/i/citrine.png",
+              "image_local": "images/blcp728/blcp728_citrine.jpg"
+            },
+            {
+              "name": "Topaz",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/t/o/topaz.gif",
+              "image_local": "images/blcp728/blcp728_topaz.jpg"
+            },
+            {
+              "name": "Peridot",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/p/e/peridot.png",
+              "image_local": "images/blcp728/blcp728_peridot.jpg"
+            },
+            {
+              "name": "Emerald",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/e/m/emerald.png",
+              "image_local": "images/blcp728/blcp728_emerald.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "BLCP730",
+      "url": "https://www.international-silver.com/en__/blcp730",
+      "scraped_at": "2025-08-10T13:05:36.600702",
+      "title": "Fake belly clip w a dangling classic moon w the star",
+      "description": "Cheater fake belly ring clip with a vintage moon with a star dangling part (dangling part is made from silver plating brass)",
+      "tags": [
+        "Fake/Illusion Hoops",
+        "Others",
+        "Per Piece"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/blcp730_fake_belly_clip_w_a_dangling_classic_moon_w_the_star_.jpg",
+      "main_image_local": "images/blcp730/blcp730_main.jpg",
+      "variants": [
+        {
+          "type": "standard_variant",
+          "label": "BLCP730",
+          "headers": [
+            "Packing Option"
+          ],
+          "items": [
+            {
+              "Packing Option": "Blister package"
+            },
+            {
+              "Packing Option": "Extra-Thin package to save shipping cost"
+            }
+          ]
+        },
+        {
+          "type": "color_variant",
+          "label": "CZ Color",
+          "options": [
+            {
+              "name": "",
+              "image": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "BLCP733",
+      "url": "https://www.international-silver.com/en__/blcp733",
+      "scraped_at": "2025-08-10T13:05:40.832786",
+      "title": "Fake belly clip w a dangling Moon in the Circle",
+      "description": "Cheater fake belly ring clip with a 'sleepy moon' dangling part",
+      "tags": [
+        "Fake/Illusion Hoops",
+        "Others",
+        "Per Piece"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/blcp733_fake_belly_clip_w_a_dangling_moon_in_the_circle_.jpg",
+      "main_image_local": "images/blcp733/blcp733_main.jpg",
+      "variants": [
+        {
+          "type": "standard_variant",
+          "label": "BLCP733",
+          "headers": [
+            "Packing Option"
+          ],
+          "items": [
+            {
+              "Packing Option": "Blister package"
+            },
+            {
+              "Packing Option": "Extra-Thin package to save shipping cost"
+            }
+          ]
+        },
+        {
+          "type": "color_variant",
+          "label": "CZ Color",
+          "options": [
+            {
+              "name": "",
+              "image": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "BNE2CL",
+      "url": "https://www.international-silver.com/en__/bne2cl",
+      "scraped_at": "2025-08-10T13:05:45.001169",
+      "title": "316L steel snake eye piercing banana with 3mm bezel ball",
+      "description": "Surgical steel curved barbell for the tongue \"snake eyes\" piercing. 16g/1.2mm with a 3mm press fit gem ball on each side.",
+      "tags": [
+        "Micro Curved Barbells",
+        "Surgical Steel 316L",
+        "Per Piece",
+        "16g (1.2mm)",
+        "Snake Eyes"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/bne2cl_micro_curved_barbells_surgical_steel_316l_eyebrow.jpg",
+      "main_image_local": "images/bne2cl/bne2cl_main.jpg",
+      "variants": [
+        {
+          "type": "standard_variant",
+          "label": "BNE2CL",
+          "headers": [
+            "Length"
+          ],
+          "items": [
+            {
+              "Length": "12.00mm"
+            },
+            {
+              "Length": "13.00mm"
+            },
+            {
+              "Length": "14.00mm"
+            },
+            {
+              "Length": "15.00mm"
+            },
+            {
+              "Length": "16.00mm"
+            },
+            {
+              "Length": "17.00mm"
+            },
+            {
+              "Length": "18.00mm"
+            },
+            {
+              "Length": "19.00mm"
+            }
+          ]
+        },
+        {
+          "type": "color_variant",
+          "label": "CZ Color",
+          "options": [
+            {
+              "name": "Clear",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/c/l/clear.gif",
+              "image_local": "images/bne2cl/bne2cl_clear.jpg"
+            },
+            {
+              "name": "AB",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/b/ab_2.png",
+              "image_local": "images/bne2cl/bne2cl_ab.jpg"
+            },
+            {
+              "name": "Rose",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/r/o/rose.gif",
+              "image_local": "images/bne2cl/bne2cl_rose.jpg"
+            },
+            {
+              "name": "Light Sapphire",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-sapphire.png",
+              "image_local": "images/bne2cl/bne2cl_light_sapphire.jpg"
+            },
+            {
+              "name": "Light Sapphire Opal",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-sapphire-opal.png",
+              "image_local": "images/bne2cl/bne2cl_light_sapphire_opal.jpg"
+            },
+            {
+              "name": "Sapphire",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/s/a/sapphire.gif",
+              "image_local": "images/bne2cl/bne2cl_sapphire.jpg"
+            },
+            {
+              "name": "Aquamarine",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/q/aquamarine.png",
+              "image_local": "images/bne2cl/bne2cl_aquamarine.jpg"
+            },
+            {
+              "name": "Blue Zircon",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/b/l/blue-zircon.gif",
+              "image_local": "images/bne2cl/bne2cl_blue_zircon.jpg"
+            },
+            {
+              "name": "Light Amethyst",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-amethyst.png",
+              "image_local": "images/bne2cl/bne2cl_light_amethyst.jpg"
+            },
+            {
+              "name": "Amethyst",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/m/amethyst.png",
+              "image_local": "images/bne2cl/bne2cl_amethyst.jpg"
+            },
+            {
+              "name": "Jet",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/j/e/jet.gif",
+              "image_local": "images/bne2cl/bne2cl_jet.jpg"
+            },
+            {
+              "name": "Fuchsia",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/f/u/fuchsia.gif",
+              "image_local": "images/bne2cl/bne2cl_fuchsia.jpg"
+            },
+            {
+              "name": "Light Siam",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-siam.png",
+              "image_local": "images/bne2cl/bne2cl_light_siam.jpg"
+            },
+            {
+              "name": "Hyacinth",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/h/y/hyacinth.png",
+              "image_local": "images/bne2cl/bne2cl_hyacinth.jpg"
+            },
+            {
+              "name": "Topaz",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/t/o/topaz.gif",
+              "image_local": "images/bne2cl/bne2cl_topaz.jpg"
+            },
+            {
+              "name": "Peridot",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/p/e/peridot.png",
+              "image_local": "images/bne2cl/bne2cl_peridot.jpg"
+            },
+            {
+              "name": "Emerald",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/e/m/emerald.png",
+              "image_local": "images/bne2cl/bne2cl_emerald.jpg"
+            },
+            {
+              "name": "AB Rose",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/b/ab-rose_2.png",
+              "image_local": "images/bne2cl/bne2cl_ab_rose.jpg"
+            },
+            {
+              "name": "AB Sapphire",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/b/ab-sapphire.png",
+              "image_local": "images/bne2cl/bne2cl_ab_sapphire.jpg"
+            },
+            {
+              "name": "AB Light Siam",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/b/ab-light-siam.png",
+              "image_local": "images/bne2cl/bne2cl_ab_light_siam.jpg"
+            },
+            {
+              "name": "Assorted",
+              "image": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "BNEAJB3",
+      "url": "https://www.international-silver.com/en__/bneajb3",
+      "scraped_at": "2025-08-10T13:05:50.155065",
+      "title": "Steel eyebrow banana w 3mm bio-flex balls w crystals",
+      "description": "Surgical steel curved barbell 16g/1.2mm with 3mm acrylic ptfe balls with press fit gems.",
+      "tags": [
+        "Micro Curved Barbells",
+        "Surgical Steel 316L with Acrylic Parts",
+        "Per Piece",
+        "16g (1.2mm)",
+        "Snake Eyes"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/bneajb3_micro_curved_barbells_surgical_steel_316l_with_acrylic_parts_eyebrow.jpg",
+      "main_image_local": "images/bneajb3/bneajb3_main.jpg",
+      "variants": [
+        {
+          "type": "standard_variant",
+          "label": "BNEAJB3",
+          "headers": [
+            "Length"
+          ],
+          "items": [
+            {
+              "Length": "8.00mm"
+            },
+            {
+              "Length": "10.00mm"
+            },
+            {
+              "Length": "12.00mm"
+            },
+            {
+              "Length": "14.00mm"
+            },
+            {
+              "Length": "16.00mm"
+            },
+            {
+              "Length": "18.00mm"
+            },
+            {
+              "Length": "19.00mm"
+            }
+          ]
+        },
+        {
+          "type": "color_variant",
+          "label": "CZ Color",
+          "options": [
+            {
+              "name": "Clear",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/c/l/clear.gif",
+              "image_local": "images/bneajb3/bneajb3_clear.jpg"
+            },
+            {
+              "name": "AB",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/b/ab_2.png",
+              "image_local": "images/bneajb3/bneajb3_ab.jpg"
+            },
+            {
+              "name": "Rose",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/r/o/rose.gif",
+              "image_local": "images/bneajb3/bneajb3_rose.jpg"
+            },
+            {
+              "name": "Light Sapphire",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-sapphire.png",
+              "image_local": "images/bneajb3/bneajb3_light_sapphire.jpg"
+            },
+            {
+              "name": "Sapphire",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/s/a/sapphire.gif",
+              "image_local": "images/bneajb3/bneajb3_sapphire.jpg"
+            },
+            {
+              "name": "Aquamarine",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/q/aquamarine.png",
+              "image_local": "images/bneajb3/bneajb3_aquamarine.jpg"
+            },
+            {
+              "name": "Blue Zircon",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/b/l/blue-zircon.gif",
+              "image_local": "images/bneajb3/bneajb3_blue_zircon.jpg"
+            },
+            {
+              "name": "Capri Blue",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/c/a/capri-blue.png",
+              "image_local": "images/bneajb3/bneajb3_capri_blue.jpg"
+            },
+            {
+              "name": "Light Amethyst",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-amethyst.png",
+              "image_local": "images/bneajb3/bneajb3_light_amethyst.jpg"
+            },
+            {
+              "name": "Amethyst",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/m/amethyst.png",
+              "image_local": "images/bneajb3/bneajb3_amethyst.jpg"
+            },
+            {
+              "name": "Jet",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/j/e/jet.gif",
+              "image_local": "images/bneajb3/bneajb3_jet.jpg"
+            },
+            {
+              "name": "Fuchsia",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/f/u/fuchsia.gif",
+              "image_local": "images/bneajb3/bneajb3_fuchsia.jpg"
+            },
+            {
+              "name": "Light Siam",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-siam.png",
+              "image_local": "images/bneajb3/bneajb3_light_siam.jpg"
+            },
+            {
+              "name": "Hyacinth",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/h/y/hyacinth.png",
+              "image_local": "images/bneajb3/bneajb3_hyacinth.jpg"
+            },
+            {
+              "name": "Citrine",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/c/i/citrine.png",
+              "image_local": "images/bneajb3/bneajb3_citrine.jpg"
+            },
+            {
+              "name": "Topaz",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/t/o/topaz.gif",
+              "image_local": "images/bneajb3/bneajb3_topaz.jpg"
+            },
+            {
+              "name": "Peridot",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/p/e/peridot.png",
+              "image_local": "images/bneajb3/bneajb3_peridot.jpg"
+            },
+            {
+              "name": "Emerald",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/e/m/emerald.png",
+              "image_local": "images/bneajb3/bneajb3_emerald.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "BNEBL",
+      "url": "https://www.international-silver.com/en__/bnebl",
+      "scraped_at": "2025-08-10T13:05:56.974803",
+      "title": "316L steel snake eye piercing banana with 3mm ball",
+      "description": "Surgical steel curved barbell for the tongue \"snake eyes\" piercing. 16g/1.2mm and 14g/1.6mm with a 3mm steel ball on each side.",
+      "tags": [
+        "Micro Curved Barbells",
+        "Surgical Steel 316L",
+        "Per Piece",
+        "14g (1.6mm)",
+        "16g (1.2mm)",
+        "Snake Eyes"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/bnebl_micro_curved_barbells_surgical_steel_316l_eyebrow.jpg",
+      "main_image_local": "images/bnebl/bnebl_main.jpg",
+      "variants": [
+        {
+          "type": "standard_variant",
+          "label": "BNEBL",
+          "headers": [
+            "Gauge",
+            "Price"
+          ],
+          "items": [
+            {
+              "Gauge": "1.20mm",
+              "Price": 0.22
+            },
+            {
+              "Gauge": "1.60mm",
+              "Price": 0.25
+            }
+          ]
+        },
+        {
+          "type": "color_variant",
+          "label": "CZ Color",
+          "options": [
+            {
+              "name": "13.00mm",
+              "image": null
+            },
+            {
+              "name": "14.00mm",
+              "image": null
+            },
+            {
+              "name": "15.00mm",
+              "image": null
+            },
+            {
+              "name": "16.00mm",
+              "image": null
+            },
+            {
+              "name": "17.00mm",
+              "image": null
+            },
+            {
+              "name": "18.00mm",
+              "image": null
+            },
+            {
+              "name": "19.00mm",
+              "image": null
+            },
+            {
+              "name": "20.00mm",
+              "image": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "BNECL",
+      "url": "https://www.international-silver.com/en__/bnecl",
+      "scraped_at": "2025-08-10T13:06:01.223266",
+      "title": "316L steel belly banana ring with 3mm multi-jewel ball",
+      "description": "Surgical steel curved barbell for the tongue piercing with a 3mm multi-gem ball on each side.",
+      "tags": [
+        "Micro Curved Barbells",
+        "Surgical Steel 316L",
+        "Per Piece",
+        "16g (1.2mm)"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/bnecl_micro_curved_barbells_surgical_steel_316l_eyebrow.jpg",
+      "main_image_local": "images/bnecl/bnecl_main.jpg",
+      "variants": [
+        {
+          "type": "standard_variant",
+          "label": "BNECL",
+          "headers": [
+            "Length"
+          ],
+          "items": [
+            {
+              "Length": "6.00mm"
+            },
+            {
+              "Length": "8.00mm"
+            },
+            {
+              "Length": "10.00mm"
+            },
+            {
+              "Length": "12.00mm"
+            },
+            {
+              "Length": "14.00mm"
+            },
+            {
+              "Length": "16.00mm"
+            }
+          ]
+        },
+        {
+          "type": "color_variant",
+          "label": "CZ Color",
+          "options": [
+            {
+              "name": "Clear",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/c/l/clear.gif",
+              "image_local": "images/bnecl/bnecl_clear.jpg"
+            },
+            {
+              "name": "AB",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/b/ab_2.png",
+              "image_local": "images/bnecl/bnecl_ab.jpg"
+            },
+            {
+              "name": "Rose",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/r/o/rose.gif",
+              "image_local": "images/bnecl/bnecl_rose.jpg"
+            },
+            {
+              "name": "Light Sapphire",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-sapphire.png",
+              "image_local": "images/bnecl/bnecl_light_sapphire.jpg"
+            },
+            {
+              "name": "Sapphire",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/s/a/sapphire.gif",
+              "image_local": "images/bnecl/bnecl_sapphire.jpg"
+            },
+            {
+              "name": "Aquamarine",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/q/aquamarine.png",
+              "image_local": "images/bnecl/bnecl_aquamarine.jpg"
+            },
+            {
+              "name": "Blue Zircon",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/b/l/blue-zircon.gif",
+              "image_local": "images/bnecl/bnecl_blue_zircon.jpg"
+            },
+            {
+              "name": "Light Amethyst",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-amethyst.png",
+              "image_local": "images/bnecl/bnecl_light_amethyst.jpg"
+            },
+            {
+              "name": "Amethyst",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/m/amethyst.png",
+              "image_local": "images/bnecl/bnecl_amethyst.jpg"
+            },
+            {
+              "name": "Jet",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/j/e/jet.gif",
+              "image_local": "images/bnecl/bnecl_jet.jpg"
+            },
+            {
+              "name": "Fuchsia",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/f/u/fuchsia.gif",
+              "image_local": "images/bnecl/bnecl_fuchsia.jpg"
+            },
+            {
+              "name": "Light Siam",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-siam.png",
+              "image_local": "images/bnecl/bnecl_light_siam.jpg"
+            },
+            {
+              "name": "Hyacinth",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/h/y/hyacinth.png",
+              "image_local": "images/bnecl/bnecl_hyacinth.jpg"
+            },
+            {
+              "name": "Garnet",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/g/a/garnet.gif",
+              "image_local": "images/bnecl/bnecl_garnet.jpg"
+            },
+            {
+              "name": "Topaz",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/t/o/topaz.gif",
+              "image_local": "images/bnecl/bnecl_topaz.jpg"
+            },
+            {
+              "name": "Peridot",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/p/e/peridot.png",
+              "image_local": "images/bnecl/bnecl_peridot.jpg"
+            },
+            {
+              "name": "Emerald",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/e/m/emerald.png",
+              "image_local": "images/bnecl/bnecl_emerald.jpg"
+            },
+            {
+              "name": "Multi-colored",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/m/u/multi-colored_crystal.png",
+              "image_local": "images/bnecl/bnecl_multi-colored.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "BNEFO3L",
+      "url": "https://www.international-silver.com/en__/bnefo3l",
+      "scraped_at": "2025-08-10T13:06:05.900968",
+      "title": "Surgical steel snake eye piercing banana curved barbell 3mm",
+      "description": "1.2mm/16g surgical steel curved barbell for the tongue \"snake eyes piercing\" with 3mm frosted finished steel balls.",
+      "tags": [
+        "Micro Curved Barbells",
+        "Surgical Steel 316L",
+        "Per Piece",
+        "16g (1.2mm)",
+        "Snake Eyes"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/bnefo3l_surgical_steel_snake_eye_piercing_curved_barbell_3mm.jpg",
+      "main_image_local": "images/bnefo3l/bnefo3l_main.jpg",
+      "variants": [
+        {
+          "type": "standard_variant",
+          "label": "BNEFO3L",
+          "headers": [
+            "Length"
+          ],
+          "items": [
+            {
+              "Length": "6.00mm"
+            },
+            {
+              "Length": "8.00mm"
+            },
+            {
+              "Length": "10.00mm"
+            },
+            {
+              "Length": "12.00mm"
+            },
+            {
+              "Length": "14.00mm"
+            },
+            {
+              "Length": "16.00mm"
+            }
+          ]
+        },
+        {
+          "type": "color_variant",
+          "label": "CZ Color",
+          "options": [
+            {
+              "name": "",
+              "image": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "BNEFO5L",
+      "url": "https://www.international-silver.com/en__/bnefo5l",
+      "scraped_at": "2025-08-10T13:06:10.927436",
+      "title": "Steel snake eye piercing banana w 5mm frosted steel ball",
+      "description": "Surgical steel curved barbell for snake eyes piercing 16g/1.2mm with 5mm frosted finish steel balls.",
+      "tags": [
+        "Micro Curved Barbells",
+        "Surgical Steel 316L",
+        "Per Piece",
+        "16g (1.2mm)",
+        "Snake Eyes"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/bnefo5l_micro_curved_barbells_surgical_steel_316l_tongue.jpg",
+      "main_image_local": "images/bnefo5l/bnefo5l_main.jpg",
+      "variants": [
+        {
+          "type": "standard_variant",
+          "label": "BNEFO5L",
+          "headers": [
+            "Length"
+          ],
+          "items": [
+            {
+              "Length": "12.00mm"
+            },
+            {
+              "Length": "13.00mm"
+            },
+            {
+              "Length": "14.00mm"
+            },
+            {
+              "Length": "15.00mm"
+            },
+            {
+              "Length": "16.00mm"
+            }
+          ]
+        },
+        {
+          "type": "color_variant",
+          "label": "CZ Color",
+          "options": [
+            {
+              "name": "",
+              "image": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "BNEFR3E",
+      "url": "https://www.international-silver.com/en__/bnefr3e",
+      "scraped_at": "2025-08-10T13:06:16.285193",
+      "title": "316L steel eyebrow banana w/ 2 color crystal ball",
+      "description": "Surgical steel curved barbell 16g/1.2mm with 3mm dual color multi gem ferido balls covered with resin.",
+      "tags": [
+        "Micro Curved Barbells",
+        "Surgical Steel 316L",
+        "Per Piece",
+        "16g (1.2mm)",
+        "Ferido",
+        "Snake Eyes"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/bnefr3e_micro_curved_barbells_surgical_steel_316l_eyebrow.jpg",
+      "main_image_local": "images/bnefr3e/bnefr3e_main.jpg",
+      "variants": [
+        {
+          "type": "standard_variant",
+          "label": "BNEFR3E",
+          "headers": [
+            "Length"
+          ],
+          "items": [
+            {
+              "Length": "6.00mm"
+            },
+            {
+              "Length": "8.00mm"
+            },
+            {
+              "Length": "10.00mm"
+            },
+            {
+              "Length": "12.00mm"
+            },
+            {
+              "Length": "14.00mm"
+            },
+            {
+              "Length": "16.00mm"
+            },
+            {
+              "Length": "18.00mm"
+            },
+            {
+              "Length": "19.00mm"
+            }
+          ]
+        },
+        {
+          "type": "color_variant",
+          "label": "CZ Color",
+          "options": [
+            {
+              "name": "# 1 in Picture",
+              "image": null
+            },
+            {
+              "name": "# 2 in Picture",
+              "image": null
+            },
+            {
+              "name": "# 3 in Picture",
+              "image": null
+            },
+            {
+              "name": "# 4 in Picture",
+              "image": null
+            },
+            {
+              "name": "# 5 in Picture",
+              "image": null
+            },
+            {
+              "name": "# 6 in Picture",
+              "image": null
+            },
+            {
+              "name": "# 7 in Picture",
+              "image": null
+            },
+            {
+              "name": "# 8 in Picture",
+              "image": null
+            },
+            {
+              "name": "# 9 in Picture",
+              "image": null
+            },
+            {
+              "name": "# 10 in Picture",
+              "image": null
+            },
+            {
+              "name": "# 11 in Picture",
+              "image": null
+            },
+            {
+              "name": "# 12 in Picture",
+              "image": null
+            },
+            {
+              "name": "# 13 in Picture",
+              "image": null
+            },
+            {
+              "name": "# 14 in Picture",
+              "image": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "BNEHJBL",
+      "url": "https://www.international-silver.com/en__/bnehjbl",
+      "scraped_at": "2025-08-10T13:06:23.166420",
+      "title": "Surgical steel snake bite tongue piercing banana",
+      "description": "Surgical steel curved barbell for snake eyes tongue piercing. 16g/1.2mm with 3mm press fit gem in half balls.",
+      "tags": [
+        "Micro Curved Barbells",
+        "Surgical Steel 316L",
+        "Per Piece",
+        "16g (1.2mm)",
+        "Snake Eyes"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/bnehjbl_micro_curved_barbells_surgical_steel_316l_eyebrow.jpg",
+      "main_image_local": "images/bnehjbl/bnehjbl_main.jpg",
+      "variants": [
+        {
+          "type": "standard_variant",
+          "label": "BNEHJBL",
+          "headers": [
+            "Length"
+          ],
+          "items": [
+            {
+              "Length": "6.00mm"
+            },
+            {
+              "Length": "8.00mm"
+            },
+            {
+              "Length": "10.00mm"
+            },
+            {
+              "Length": "11.00mm"
+            },
+            {
+              "Length": "12.00mm"
+            },
+            {
+              "Length": "13.00mm"
+            },
+            {
+              "Length": "14.00mm"
+            },
+            {
+              "Length": "15.00mm"
+            },
+            {
+              "Length": "16.00mm"
+            },
+            {
+              "Length": "17.00mm"
+            },
+            {
+              "Length": "18.00mm"
+            },
+            {
+              "Length": "19.00mm"
+            }
+          ]
+        },
+        {
+          "type": "color_variant",
+          "label": "CZ Color",
+          "options": [
+            {
+              "name": "Clear",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/c/l/clear.gif",
+              "image_local": "images/bnehjbl/bnehjbl_clear.jpg"
+            },
+            {
+              "name": "AB",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/b/ab_2.png",
+              "image_local": "images/bnehjbl/bnehjbl_ab.jpg"
+            },
+            {
+              "name": "Rose",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/r/o/rose.gif",
+              "image_local": "images/bnehjbl/bnehjbl_rose.jpg"
+            },
+            {
+              "name": "Light Sapphire",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-sapphire.png",
+              "image_local": "images/bnehjbl/bnehjbl_light_sapphire.jpg"
+            },
+            {
+              "name": "Sapphire",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/s/a/sapphire.gif",
+              "image_local": "images/bnehjbl/bnehjbl_sapphire.jpg"
+            },
+            {
+              "name": "Aquamarine",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/q/aquamarine.png",
+              "image_local": "images/bnehjbl/bnehjbl_aquamarine.jpg"
+            },
+            {
+              "name": "Blue Zircon",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/b/l/blue-zircon.gif",
+              "image_local": "images/bnehjbl/bnehjbl_blue_zircon.jpg"
+            },
+            {
+              "name": "Light Amethyst",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-amethyst.png",
+              "image_local": "images/bnehjbl/bnehjbl_light_amethyst.jpg"
+            },
+            {
+              "name": "Amethyst",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/m/amethyst.png",
+              "image_local": "images/bnehjbl/bnehjbl_amethyst.jpg"
+            },
+            {
+              "name": "Jet",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/j/e/jet.gif",
+              "image_local": "images/bnehjbl/bnehjbl_jet.jpg"
+            },
+            {
+              "name": "Fuchsia",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/f/u/fuchsia.gif",
+              "image_local": "images/bnehjbl/bnehjbl_fuchsia.jpg"
+            },
+            {
+              "name": "Light Siam",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-siam.png",
+              "image_local": "images/bnehjbl/bnehjbl_light_siam.jpg"
+            },
+            {
+              "name": "Hyacinth",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/h/y/hyacinth.png",
+              "image_local": "images/bnehjbl/bnehjbl_hyacinth.jpg"
+            },
+            {
+              "name": "Topaz",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/t/o/topaz.gif",
+              "image_local": "images/bnehjbl/bnehjbl_topaz.jpg"
+            },
+            {
+              "name": "Peridot",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/p/e/peridot.png",
+              "image_local": "images/bnehjbl/bnehjbl_peridot.jpg"
+            },
+            {
+              "name": "Emerald",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/e/m/emerald.png",
+              "image_local": "images/bnehjbl/bnehjbl_emerald.jpg"
+            },
+            {
+              "name": "Assorted",
+              "image": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "BNEJB25L",
+      "url": "https://www.international-silver.com/en__/bnejb25l",
+      "scraped_at": "2025-08-10T13:06:27.845977",
+      "title": "Surgical steel snake bite tongue piercing banana",
+      "description": "Surgical steel curved barbell for snake eyes piercing. 16g/1.2mm with a 2.5mm press fit gem ball on each side.",
+      "tags": [
+        "Micro Curved Barbells",
+        "Surgical Steel 316L",
+        "Per Piece",
+        "16g (1.2mm)",
+        "Snake Eyes"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/bnejb25l_micro_curved_barbells_surgical_steel_316l_eyebrow.jpg",
+      "main_image_local": "images/bnejb25l/bnejb25l_main.jpg",
+      "variants": [
+        {
+          "type": "standard_variant",
+          "label": "BNEJB25L",
+          "headers": [
+            "Length"
+          ],
+          "items": [
+            {
+              "Length": "8.00mm"
+            },
+            {
+              "Length": "10.00mm"
+            },
+            {
+              "Length": "12.00mm"
+            },
+            {
+              "Length": "14.00mm"
+            },
+            {
+              "Length": "16.00mm"
+            },
+            {
+              "Length": "18.00mm"
+            },
+            {
+              "Length": "19.00mm"
+            }
+          ]
+        },
+        {
+          "type": "color_variant",
+          "label": "CZ Color",
+          "options": [
+            {
+              "name": "Clear",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/c/l/clear.gif",
+              "image_local": "images/bnejb25l/bnejb25l_clear.jpg"
+            },
+            {
+              "name": "AB",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/b/ab_2.png",
+              "image_local": "images/bnejb25l/bnejb25l_ab.jpg"
+            },
+            {
+              "name": "Rose",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/r/o/rose.gif",
+              "image_local": "images/bnejb25l/bnejb25l_rose.jpg"
+            },
+            {
+              "name": "Light Sapphire",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-sapphire.png",
+              "image_local": "images/bnejb25l/bnejb25l_light_sapphire.jpg"
+            },
+            {
+              "name": "Sapphire",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/s/a/sapphire.gif",
+              "image_local": "images/bnejb25l/bnejb25l_sapphire.jpg"
+            },
+            {
+              "name": "Aquamarine",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/q/aquamarine.png",
+              "image_local": "images/bnejb25l/bnejb25l_aquamarine.jpg"
+            },
+            {
+              "name": "Blue Zircon",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/b/l/blue-zircon.gif",
+              "image_local": "images/bnejb25l/bnejb25l_blue_zircon.jpg"
+            },
+            {
+              "name": "Light Amethyst",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-amethyst.png",
+              "image_local": "images/bnejb25l/bnejb25l_light_amethyst.jpg"
+            },
+            {
+              "name": "Amethyst",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/m/amethyst.png",
+              "image_local": "images/bnejb25l/bnejb25l_amethyst.jpg"
+            },
+            {
+              "name": "Jet",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/j/e/jet.gif",
+              "image_local": "images/bnejb25l/bnejb25l_jet.jpg"
+            },
+            {
+              "name": "Fuchsia",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/f/u/fuchsia.gif",
+              "image_local": "images/bnejb25l/bnejb25l_fuchsia.jpg"
+            },
+            {
+              "name": "Light Siam",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-siam.png",
+              "image_local": "images/bnejb25l/bnejb25l_light_siam.jpg"
+            },
+            {
+              "name": "Hyacinth",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/h/y/hyacinth.png",
+              "image_local": "images/bnejb25l/bnejb25l_hyacinth.jpg"
+            },
+            {
+              "name": "Topaz",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/t/o/topaz.gif",
+              "image_local": "images/bnejb25l/bnejb25l_topaz.jpg"
+            },
+            {
+              "name": "Peridot",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/p/e/peridot.png",
+              "image_local": "images/bnejb25l/bnejb25l_peridot.jpg"
+            },
+            {
+              "name": "Emerald",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/e/m/emerald.png",
+              "image_local": "images/bnejb25l/bnejb25l_emerald.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "BNEKCL",
+      "url": "https://www.international-silver.com/en__/bnekcl",
+      "scraped_at": "2025-08-10T13:06:33.731086",
+      "title": "Anodized 316L steel snake eye banana w/ 3mm bezel ball",
+      "description": "Surgical steel curved barbell in PVD plating color for the tongue \"snake eyes\" piercing. 16g/1.2mm with 3mm press fit gem balls.",
+      "tags": [
+        "Micro Curved Barbells",
+        "PVD Plated Surgical Steel",
+        "Per Piece",
+        "16g (1.2mm)",
+        "Snake Eyes"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/bnekcl_micro_curved_barbells_anodized_surgical_steel_316l_eyebrow.jpg",
+      "main_image_local": "images/bnekcl/bnekcl_main.jpg",
+      "variants": [
+        {
+          "type": "standard_variant",
+          "label": "BNEKCL",
+          "headers": [
+            "Length"
+          ],
+          "items": [
+            {
+              "Length": "14.00mm"
+            },
+            {
+              "Length": "16.00mm"
+            }
+          ]
+        },
+        {
+          "type": "color_variant",
+          "label": "CZ Color",
+          "options": [
+            {
+              "name": "Blue PVD Plated w/ Clear Crystal",
+              "image": null
+            },
+            {
+              "name": "Rainbow PVD Plated w/ Clear Crystal",
+              "image": null
+            },
+            {
+              "name": "Black PVD Plated w/ AB Crystal",
+              "image": null
+            },
+            {
+              "name": "Blue PVD Plated w/ AB Crystal",
+              "image": null
+            },
+            {
+              "name": "Black PVD Plated w/ Light Siam Crystal",
+              "image": null
+            },
+            {
+              "name": "Gold PVD Plated w/ AB Crystal",
+              "image": null
+            },
+            {
+              "name": "Black PVD Plated w/ Amethyst Crystal",
+              "image": null
+            },
+            {
+              "name": "Black PVD Plated w/ Aquamarine Crystal",
+              "image": null
+            },
+            {
+              "name": "Blue PVD Plated w/ Aquamarine Crystal",
+              "image": null
+            },
+            {
+              "name": "Black PVD Plated w/ Fuchsia Crystal",
+              "image": null
+            },
+            {
+              "name": "Black PVD Plated w/ Hyacinth Crystal",
+              "image": null
+            },
+            {
+              "name": "Black PVD Plated w/ Jet Crystal",
+              "image": null
+            },
+            {
+              "name": "Black PVD Plated w/ Light Amethyst Crystal",
+              "image": null
+            },
+            {
+              "name": "Black PVD Plated w/ Multi Crystal",
+              "image": null
+            },
+            {
+              "name": "Black PVD Plated w/ Peridot Crystal",
+              "image": null
+            },
+            {
+              "name": "Black PVD Plated w/ Rose Crystal",
+              "image": null
+            },
+            {
+              "name": "Blue PVD Plated w/ Rose Crystal",
+              "image": null
+            },
+            {
+              "name": "Rainbow PVD Plated w/ Rose Crystal",
+              "image": null
+            },
+            {
+              "name": "Black PVD Plated w/ Sapphire Crystal",
+              "image": null
+            },
+            {
+              "name": "Black PVD Plated w/ Topaz Crystal",
+              "image": null
+            },
+            {
+              "name": "Black PVD Plated w/ Clear Crystal",
+              "image": null
+            },
+            {
+              "name": "Gold PVD Plated w/ Clear Crystal",
+              "image": null
+            },
+            {
+              "name": "Black PVD Plated w/ Light Sapphire Crystal",
+              "image": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "BXCLP2-000000",
+      "url": "https://www.international-silver.com/en__/bxclp2",
+      "scraped_at": "2025-08-10T13:06:39.238549",
+      "title": "Box w 25 pcs. of non piercing clips  (size 8mm and 10mm)",
+      "description": "Jewelry box with 25 pcs. of spring loaded cheater fake piercing clips. Sizes 8mm and 10mm",
+      "tags": [
+        "Fake/Illusion Body Jewelry",
+        "Others",
+        "On Displays"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/bxclp2_fake_illusion_body_jewelry_others_nose.jpg",
+      "main_image_local": "images/bxclp2/bxclp2_main.jpg",
+      "variants": []
+    },
+    {
+      "sku": "CSB8",
+      "url": "https://www.international-silver.com/en__/csb8",
+      "scraped_at": "2025-08-10T13:06:43.468894",
+      "title": "\"stick on\"assorted color belly button crystal",
+      "description": "Stick-on belly button crystal, size 8mm and comes in a blister package",
+      "tags": [
+        "Fake/Illusion Body Jewelry",
+        "Others",
+        "Per Piece"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/csb8_fake_illusion_body_jewelry_others_belly_button.jpg",
+      "main_image_local": "images/csb8/csb8_main.jpg",
+      "variants": [
+        {
+          "type": "standard_variant",
+          "label": "CSB8",
+          "headers": [
+            "Packing Option"
+          ],
+          "items": [
+            {
+              "Packing Option": "Blister package"
+            },
+            {
+              "Packing Option": "Extra-Thin package to save shipping cost"
+            }
+          ]
+        },
+        {
+          "type": "color_variant",
+          "label": "CZ Color",
+          "options": [
+            {
+              "name": "Clear",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/c/l/clear.gif",
+              "image_local": "images/csb8/csb8_clear.jpg"
+            },
+            {
+              "name": "Rose",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/r/o/rose.gif",
+              "image_local": "images/csb8/csb8_rose.jpg"
+            },
+            {
+              "name": "Light Sapphire",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-sapphire.png",
+              "image_local": "images/csb8/csb8_light_sapphire.jpg"
+            },
+            {
+              "name": "Sapphire",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/s/a/sapphire.gif",
+              "image_local": "images/csb8/csb8_sapphire.jpg"
+            },
+            {
+              "name": "Aquamarine",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/q/aquamarine.png",
+              "image_local": "images/csb8/csb8_aquamarine.jpg"
+            },
+            {
+              "name": "Light Amethyst",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-amethyst.png",
+              "image_local": "images/csb8/csb8_light_amethyst.jpg"
+            },
+            {
+              "name": "Light Siam",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-siam.png",
+              "image_local": "images/csb8/csb8_light_siam.jpg"
+            },
+            {
+              "name": "Assorted",
+              "image": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GPHZM",
+      "url": "https://www.international-silver.com/en__/gphzm",
+      "scraped_at": "2025-08-10T13:06:48.619517",
+      "title": "18 Karat Gold Plated Silver Earring Studs Heart Shape CZ",
+      "description": "18 karat gold plating over sterling silver earring studs with a 3mm heart shape color CZ stone in prong setting. One pair",
+      "tags": [
+        "Silver 925",
+        "Sold by pair"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/gphzm-18-k-gold-plated-silver-earring-studs-heart-one-pair.jpg",
+      "main_image_local": "images/gphzm/gphzm_main.jpg",
+      "variants": [
+        {
+          "type": "standard_variant",
+          "label": "GPHZM",
+          "headers": [
+            "Size"
+          ],
+          "items": [
+            {
+              "Size": "3.00mm"
+            }
+          ]
+        },
+        {
+          "type": "color_variant",
+          "label": "CZ Color",
+          "options": [
+            {
+              "name": "Clear",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/c/l/clear_cz.png",
+              "image_local": "images/gphzm/gphzm_clear.jpg"
+            },
+            {
+              "name": "Rose",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/r/o/rose-cz.png",
+              "image_local": "images/gphzm/gphzm_rose.jpg"
+            },
+            {
+              "name": "Jet",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/j/e/jet-cz.png",
+              "image_local": "images/gphzm/gphzm_jet.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "MG80-000000",
+      "url": "https://www.international-silver.com/en__/mg80",
+      "scraped_at": "2025-08-10T13:06:53.466502",
+      "title": "Board of 3mm round clear crystal magnetic earrings",
+      "description": "L-shape acrylic display with 24 pairs of magnetic earrings with 3mm round clear gems (magnet size 3mm and 5mm)",
+      "tags": [
+        "Fake/Illusion Body Jewelry",
+        "Others",
+        "On Displays"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/mg80_fake_illusion_body_jewelry_others_belly_button.jpg",
+      "main_image_local": "images/mg80/mg80_main.jpg",
+      "variants": []
+    },
+    {
+      "sku": "MG81-000000",
+      "url": "https://www.international-silver.com/en__/mg81",
+      "scraped_at": "2025-08-10T13:06:57.516526",
+      "title": "Board with 24 prs of 3mm round crystal magnetic earrings",
+      "description": "L-shape acrylic display with 24 pairs of magnetic earrings with 3mm round color gems (magnet size 3mm and 8mm)",
+      "tags": [
+        "Fake/Illusion Body Jewelry",
+        "Others",
+        "On Displays"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/mg81_fake_illusion_body_jewelry_others_belly_button.jpg",
+      "main_image_local": "images/mg81/mg81_main.jpg",
+      "variants": []
+    },
+    {
+      "sku": "MG83",
+      "url": "https://www.international-silver.com/en__/mg83",
+      "scraped_at": "2025-08-10T13:07:01.643744",
+      "variants": [],
+      "extraction_errors": [
+        "HTTP 404"
+      ]
+    },
+    {
+      "sku": "MG84-000000",
+      "url": "https://www.international-silver.com/en__/mg84",
+      "scraped_at": "2025-08-10T13:07:04.021077",
+      "title": "Board of 6mm round crystal magnetic earrings in colors",
+      "description": "L-shape acrylic display with 24 pairs of magnetic earrings with 6mm round color gems",
+      "tags": [
+        "Fake/Illusion Body Jewelry",
+        "Others",
+        "On Displays"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/mg84_fake_illusion_body_jewelry_others_belly_button.jpg",
+      "main_image_local": "images/mg84/mg84_main.jpg",
+      "variants": []
+    },
+    {
+      "sku": "MG85-000000",
+      "url": "https://www.international-silver.com/en__/mg85",
+      "scraped_at": "2025-08-10T13:07:08.039423",
+      "title": "Board of 8mm round crystal magnetic earrings in colors",
+      "description": "L-shape acrylic display with 15 pairs of magnetic earrings with 8mm round color gems",
+      "tags": [
+        "Fake/Illusion Body Jewelry",
+        "Others",
+        "On Displays"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/mg85_fake_illusion_body_jewelry_others_belly_button.jpg",
+      "main_image_local": "images/mg85/mg85_main.jpg",
+      "variants": []
+    },
+    {
+      "sku": "MG87-000000",
+      "url": "https://www.international-silver.com/en__/mg87",
+      "scraped_at": "2025-08-10T13:07:11.993639",
+      "title": "Board of 6mm square clear crystal magnetic earrings",
+      "description": "L-shape acrylic display with 24 pairs of magnetic earrings with 6mm square clear gems",
+      "tags": [
+        "Fake/Illusion Body Jewelry",
+        "Others",
+        "On Displays"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/MG87.jpg",
+      "main_image_local": "images/mg87/mg87_main.jpg",
+      "variants": []
+    },
+    {
+      "sku": "MG88-000000",
+      "url": "https://www.international-silver.com/en__/mg88",
+      "scraped_at": "2025-08-10T13:07:16.016758",
+      "title": "Board of 3mm square clear crystal magnetic earrings",
+      "description": "L-shape acrylic display with 24 pairs of magnetic earrings with 3mm square clear gems",
+      "tags": [
+        "Fake/Illusion Body Jewelry",
+        "Others",
+        "On Displays"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/mg88_fake_illusion_body_jewelry_others_belly_button.jpg",
+      "main_image_local": "images/mg88/mg88_main.jpg",
+      "variants": []
+    },
+    {
+      "sku": "MG90-000000",
+      "url": "https://www.international-silver.com/en__/mg90",
+      "scraped_at": "2025-08-10T13:07:20.654080",
+      "title": "Board of magnetic crystal nose studs w magnet backing",
+      "description": "L-shape acrylic display with 48 pcs. of magnetic cheater fake nose studs with a 3mm color gem",
+      "tags": [
+        "Fake/Illusion Body Jewelry",
+        "Others",
+        "On Displays"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/mg90_fake_illusion_body_jewelry_others_nose.jpg",
+      "main_image_local": "images/mg90/mg90_main.jpg",
+      "variants": []
+    },
+    {
+      "sku": "MGST",
+      "url": "https://www.international-silver.com/en__/mgst",
+      "scraped_at": "2025-08-10T13:07:27.361166",
+      "title": "3mm flat crystal fake nose studs with magnet backing",
+      "description": "Cheater fake magnetic stud with a 3mm gem and an 8mm gold color magnet backing",
+      "tags": [
+        "Fake/Illusion Body Jewelry",
+        "Others",
+        "Per Piece"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/mgst_fake_illusion_body_jewelry_others_nose.jpg",
+      "main_image_local": "images/mgst/mgst_main.jpg",
+      "variants": [
+        {
+          "type": "standard_variant",
+          "label": "MGST",
+          "headers": [
+            "Packing Option"
+          ],
+          "items": [
+            {
+              "Packing Option": "Blister package"
+            },
+            {
+              "Packing Option": "Extra-Thin package to save shipping cost"
+            }
+          ]
+        },
+        {
+          "type": "color_variant",
+          "label": "CZ Color",
+          "options": [
+            {
+              "name": "Clear",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/c/l/clear.gif",
+              "image_local": "images/mgst/mgst_clear.jpg"
+            },
+            {
+              "name": "AB",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/b/ab_2.png",
+              "image_local": "images/mgst/mgst_ab.jpg"
+            },
+            {
+              "name": "Rose",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/r/o/rose.gif",
+              "image_local": "images/mgst/mgst_rose.jpg"
+            },
+            {
+              "name": "Light Sapphire",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-sapphire.png",
+              "image_local": "images/mgst/mgst_light_sapphire.jpg"
+            },
+            {
+              "name": "Sapphire",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/s/a/sapphire.gif",
+              "image_local": "images/mgst/mgst_sapphire.jpg"
+            },
+            {
+              "name": "Aquamarine",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/q/aquamarine.png",
+              "image_local": "images/mgst/mgst_aquamarine.jpg"
+            },
+            {
+              "name": "Light Amethyst",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-amethyst.png",
+              "image_local": "images/mgst/mgst_light_amethyst.jpg"
+            },
+            {
+              "name": "Amethyst",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/m/amethyst.png",
+              "image_local": "images/mgst/mgst_amethyst.jpg"
+            },
+            {
+              "name": "Jet",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/j/e/jet.gif",
+              "image_local": "images/mgst/mgst_jet.jpg"
+            },
+            {
+              "name": "Light Siam",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-siam.png",
+              "image_local": "images/mgst/mgst_light_siam.jpg"
+            },
+            {
+              "name": "Peridot",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/p/e/peridot.png",
+              "image_local": "images/mgst/mgst_peridot.jpg"
+            },
+            {
+              "name": "Emerald",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/e/m/emerald.png",
+              "image_local": "images/mgst/mgst_emerald.jpg"
+            },
+            {
+              "name": "Assorted",
+              "image": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "PKMR1",
+      "url": "https://www.international-silver.com/en__/pkmr1",
+      "scraped_at": "2025-08-10T13:07:32.937135",
+      "title": "Magnetic non piercing monroe stud with crystal",
+      "description": "Fake cheater Monroe Labret lip ring with a 3mm gem and golden magnet - One piece",
+      "tags": [
+        "Fake/Illusion Body Jewelry",
+        "Others",
+        "Per Piece"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/pkmr1_fake_illusion_body_jewelry_others_belly_button.jpg",
+      "main_image_local": "images/pkmr1/pkmr1_main.jpg",
+      "variants": [
+        {
+          "type": "standard_variant",
+          "label": "PKMR1",
+          "headers": [
+            "Packing Option"
+          ],
+          "items": [
+            {
+              "Packing Option": "Blister package"
+            },
+            {
+              "Packing Option": "Extra-Thin package to save shipping cost"
+            }
+          ]
+        },
+        {
+          "type": "color_variant",
+          "label": "CZ Color",
+          "options": [
+            {
+              "name": "Clear",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/c/l/clear.gif",
+              "image_local": "images/pkmr1/pkmr1_clear.jpg"
+            },
+            {
+              "name": "AB",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/b/ab_2.png",
+              "image_local": "images/pkmr1/pkmr1_ab.jpg"
+            },
+            {
+              "name": "Rose",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/r/o/rose.gif",
+              "image_local": "images/pkmr1/pkmr1_rose.jpg"
+            },
+            {
+              "name": "Light Sapphire",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-sapphire.png",
+              "image_local": "images/pkmr1/pkmr1_light_sapphire.jpg"
+            },
+            {
+              "name": "Sapphire",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/s/a/sapphire.gif",
+              "image_local": "images/pkmr1/pkmr1_sapphire.jpg"
+            },
+            {
+              "name": "Aquamarine",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/q/aquamarine.png",
+              "image_local": "images/pkmr1/pkmr1_aquamarine.jpg"
+            },
+            {
+              "name": "Blue Zircon",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/b/l/blue-zircon.gif",
+              "image_local": "images/pkmr1/pkmr1_blue_zircon.jpg"
+            },
+            {
+              "name": "Light Amethyst",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-amethyst.png",
+              "image_local": "images/pkmr1/pkmr1_light_amethyst.jpg"
+            },
+            {
+              "name": "Amethyst",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/m/amethyst.png",
+              "image_local": "images/pkmr1/pkmr1_amethyst.jpg"
+            },
+            {
+              "name": "Jet",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/j/e/jet.gif",
+              "image_local": "images/pkmr1/pkmr1_jet.jpg"
+            },
+            {
+              "name": "Fuchsia",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/f/u/fuchsia.gif",
+              "image_local": "images/pkmr1/pkmr1_fuchsia.jpg"
+            },
+            {
+              "name": "Light Siam",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-siam.png",
+              "image_local": "images/pkmr1/pkmr1_light_siam.jpg"
+            },
+            {
+              "name": "Garnet",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/g/a/garnet.gif",
+              "image_local": "images/pkmr1/pkmr1_garnet.jpg"
+            },
+            {
+              "name": "Topaz",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/t/o/topaz.gif",
+              "image_local": "images/pkmr1/pkmr1_topaz.jpg"
+            },
+            {
+              "name": "Peridot",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/p/e/peridot.png",
+              "image_local": "images/pkmr1/pkmr1_peridot.jpg"
+            },
+            {
+              "name": "Emerald",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/e/m/emerald.png",
+              "image_local": "images/pkmr1/pkmr1_emerald.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "PKTG1",
+      "url": "https://www.international-silver.com/en__/pktg1",
+      "scraped_at": "2025-08-10T13:07:37.885034",
+      "title": "Magnetic non piercing tragus stud with crystal",
+      "description": "Fake cheater tragus piercing with a 3mm gem and golden magnet",
+      "tags": [
+        "Fake/Illusion Body Jewelry",
+        "Others",
+        "Per Piece"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/pktg1_fake_illusion_body_jewelry_others_belly_button.jpg",
+      "main_image_local": "images/pktg1/pktg1_main.jpg",
+      "variants": [
+        {
+          "type": "standard_variant",
+          "label": "PKTG1",
+          "headers": [
+            "Packing Option"
+          ],
+          "items": [
+            {
+              "Packing Option": "Blister package"
+            },
+            {
+              "Packing Option": "Extra-Thin package to save shipping cost"
+            }
+          ]
+        },
+        {
+          "type": "color_variant",
+          "label": "CZ Color",
+          "options": [
+            {
+              "name": "Clear",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/c/l/clear.gif",
+              "image_local": "images/pktg1/pktg1_clear.jpg"
+            },
+            {
+              "name": "AB",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/b/ab_2.png",
+              "image_local": "images/pktg1/pktg1_ab.jpg"
+            },
+            {
+              "name": "Rose",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/r/o/rose.gif",
+              "image_local": "images/pktg1/pktg1_rose.jpg"
+            },
+            {
+              "name": "Light Sapphire",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-sapphire.png",
+              "image_local": "images/pktg1/pktg1_light_sapphire.jpg"
+            },
+            {
+              "name": "Sapphire",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/s/a/sapphire.gif",
+              "image_local": "images/pktg1/pktg1_sapphire.jpg"
+            },
+            {
+              "name": "Aquamarine",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/q/aquamarine.png",
+              "image_local": "images/pktg1/pktg1_aquamarine.jpg"
+            },
+            {
+              "name": "Blue Zircon",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/b/l/blue-zircon.gif",
+              "image_local": "images/pktg1/pktg1_blue_zircon.jpg"
+            },
+            {
+              "name": "Light Amethyst",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-amethyst.png",
+              "image_local": "images/pktg1/pktg1_light_amethyst.jpg"
+            },
+            {
+              "name": "Amethyst",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/a/m/amethyst.png",
+              "image_local": "images/pktg1/pktg1_amethyst.jpg"
+            },
+            {
+              "name": "Jet",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/j/e/jet.gif",
+              "image_local": "images/pktg1/pktg1_jet.jpg"
+            },
+            {
+              "name": "Fuchsia",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/f/u/fuchsia.gif",
+              "image_local": "images/pktg1/pktg1_fuchsia.jpg"
+            },
+            {
+              "name": "Light Siam",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-siam.png",
+              "image_local": "images/pktg1/pktg1_light_siam.jpg"
+            },
+            {
+              "name": "Garnet",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/g/a/garnet.gif",
+              "image_local": "images/pktg1/pktg1_garnet.jpg"
+            },
+            {
+              "name": "Topaz",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/t/o/topaz.gif",
+              "image_local": "images/pktg1/pktg1_topaz.jpg"
+            },
+            {
+              "name": "Peridot",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/p/e/peridot.png",
+              "image_local": "images/pktg1/pktg1_peridot.jpg"
+            },
+            {
+              "name": "Emerald",
+              "image": "https://www.international-silver.com/media/attribute/swatch/swatch_thumb/110x90/e/m/emerald.png",
+              "image_local": "images/pktg1/pktg1_emerald.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "PKTG10",
+      "url": "https://www.international-silver.com/en__/pktg10",
+      "scraped_at": "2025-08-10T13:07:43.037421",
+      "title": "Magnetic  tragus stud with round synthetic opal",
+      "description": "Cheater fake magnetic tragus stud ring with a round synthetic opal stone",
+      "tags": [
+        "Fake/Illusion Body Jewelry",
+        "Others",
+        "Per Piece",
+        "Opal Body Jewelry"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/PKTG10.jpg",
+      "main_image_local": "images/pktg10/pktg10_main.jpg",
+      "variants": [
+        {
+          "type": "standard_variant",
+          "label": "PKTG10",
+          "headers": [
+            "Size",
+            "Price"
+          ],
+          "items": [
+            {
+              "Size": "3.00mm",
+              "Price": 1.25
+            },
+            {
+              "Size": "4.00mm",
+              "Price": 1.7
+            },
+            {
+              "Size": "5.00mm",
+              "Price": 2.09
+            }
+          ]
+        },
+        {
+          "type": "color_variant",
+          "label": "CZ Color",
+          "options": [
+            {
+              "name": "Clear",
+              "image": null
+            },
+            {
+              "name": "Light Blue",
+              "image": null
+            },
+            {
+              "name": "Green",
+              "image": null
+            },
+            {
+              "name": "Dark Green",
+              "image": null
+            },
+            {
+              "name": "Pink",
+              "image": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "PMGOP",
+      "url": "https://www.international-silver.com/en__/pmgop",
+      "scraped_at": "2025-08-10T13:07:48.026107",
+      "title": "Magnetic  magna stud with round synthetic opal",
+      "description": "Cheater fake magnetic stud with a round synthetic opal stone",
+      "tags": [
+        "Fake/Illusion Body Jewelry",
+        "Others",
+        "Per Piece",
+        "Opal Body Jewelry"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/PMGOP.jpg",
+      "main_image_local": "images/pmgop/pmgop_main.jpg",
+      "variants": [
+        {
+          "type": "standard_variant",
+          "label": "PMGOP",
+          "headers": [
+            "Size",
+            "Price"
+          ],
+          "items": [
+            {
+              "Size": "3.00mm",
+              "Price": 1.25
+            },
+            {
+              "Size": "4.00mm",
+              "Price": 1.7
+            },
+            {
+              "Size": "5.00mm",
+              "Price": 2.09
+            },
+            {
+              "Size": "7.00mm",
+              "Price": 3.21
+            }
+          ]
+        },
+        {
+          "type": "color_variant",
+          "label": "CZ Color",
+          "options": [
+            {
+              "name": "Clear",
+              "image": null
+            },
+            {
+              "name": "Light Blue",
+              "image": null
+            },
+            {
+              "name": "Green",
+              "image": null
+            },
+            {
+              "name": "Dark Green",
+              "image": null
+            },
+            {
+              "name": "Pink",
+              "image": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "RKBLCP2",
+      "url": "https://www.international-silver.com/en__/rkblcp2",
+      "scraped_at": "2025-08-10T13:07:52.771359",
+      "title": "Rack w non piercing fake belly clip w assorted dangling",
+      "description": "Display rack with 72 or 144 pcs. of cheater fake belly ring clip with assorted dangling parts",
+      "tags": [
+        "Fake/Illusion Hoops",
+        "Others",
+        "On Displays",
+        "Cherry",
+        "Crosses",
+        "Skull",
+        "Spider"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/rkblcp2_fake_illusion_body_jewelry_others_belly_button.jpg",
+      "main_image_local": "images/rkblcp2/rkblcp2_main.jpg",
+      "variants": [
+        {
+          "type": "standard_variant",
+          "label": "RKBLCP2",
+          "headers": [
+            "Rack",
+            "Price / pc",
+            "Price"
+          ],
+          "items": [
+            {
+              "Rack": "With 6 hooks (holds 72 pcs.)",
+              "Price / pc": "$1.74 / pc",
+              "Price": 125.35
+            },
+            {
+              "Rack": "With 12 hooks (holds 144 pcs.)",
+              "Price / pc": "$1.69 / pc",
+              "Price": 243.29
+            }
+          ]
+        },
+        {
+          "type": "color_variant",
+          "label": "CZ Color",
+          "options": [
+            {
+              "name": "",
+              "image": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "RKCSB",
+      "url": "https://www.international-silver.com/en__/rkcsb",
+      "scraped_at": "2025-08-10T13:07:56.822697",
+      "title": "Rack of assorted color Stick on belly crystals",
+      "description": "Display rack with 72 or 144 pcs. of assorted color \"Stick on\" belly gems",
+      "tags": [
+        "Fake/Illusion Body Jewelry",
+        "Others",
+        "On Displays"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/rkcsb_fake_illusion_body_jewelry_others_belly_button.jpg",
+      "main_image_local": "images/rkcsb/rkcsb_main.jpg",
+      "variants": [
+        {
+          "type": "standard_variant",
+          "label": "RKCSB",
+          "headers": [
+            "Rack",
+            "Price / pc",
+            "Price"
+          ],
+          "items": [
+            {
+              "Rack": "With 6 hooks (holds 72 pcs.)",
+              "Price / pc": "$0.86 / pc",
+              "Price": 62.02
+            },
+            {
+              "Rack": "With 12 hooks (holds 144 pcs.)",
+              "Price / pc": "$0.81 / pc",
+              "Price": 116.62
+            }
+          ]
+        },
+        {
+          "type": "color_variant",
+          "label": "CZ Color",
+          "options": [
+            {
+              "name": "",
+              "image": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "RKMG",
+      "url": "https://www.international-silver.com/en__/rkmg",
+      "scraped_at": "2025-08-10T13:08:00.284630",
+      "title": "ball and cone magna studs.\"",
+      "description": "Display rack with 72 or 144 pcs. of assorted magnetic studs: gems, balls and spikes",
+      "tags": [
+        "Fake/Illusion Body Jewelry",
+        "Others",
+        "On Displays"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/rkmg_fake_illusion_body_jewelry_others_belly_button.jpg",
+      "main_image_local": "images/rkmg/rkmg_main.jpg",
+      "variants": [
+        {
+          "type": "standard_variant",
+          "label": "RKMG",
+          "headers": [
+            "Rack",
+            "Price / pc",
+            "Price"
+          ],
+          "items": [
+            {
+              "Rack": "With 6 hooks (holds 72 pcs.)",
+              "Price / pc": "$0.85 / pc",
+              "Price": 61.13
+            },
+            {
+              "Rack": "With 12 hooks (holds 144 pcs.)",
+              "Price / pc": "$0.80 / pc",
+              "Price": 114.86
+            }
+          ]
+        },
+        {
+          "type": "color_variant",
+          "label": "CZ Color",
+          "options": [
+            {
+              "name": "",
+              "image": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "SCL1-000000",
+      "url": "https://www.international-silver.com/en__/scl1",
+      "scraped_at": "2025-08-10T13:08:04.614927",
+      "title": "Pair of polished oval steel cufflinks with black inlays",
+      "description": "Mirror polished oval cufflink made of surgical steel with black enamel inlay. One pair",
+      "tags": [
+        "Stainless Steel",
+        "Per Piece"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/scl1_.jpg",
+      "main_image_local": "images/scl1/scl1_main.jpg",
+      "variants": []
+    },
+    {
+      "sku": "SCL12-000000",
+      "url": "https://www.international-silver.com/en__/scl12",
+      "scraped_at": "2025-08-10T13:08:08.548295",
+      "title": "High polished steel cufflinks w/ cross/flower on black",
+      "description": "Mirror polished round cufflink made of surgical steel with enamel cross / flower design on black background. One pair",
+      "tags": [
+        "Stainless Steel",
+        "Per Piece",
+        "Crosses",
+        "Flower"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/scl12_.jpg",
+      "main_image_local": "images/scl12/scl12_main.jpg",
+      "variants": []
+    },
+    {
+      "sku": "SCL16-000000",
+      "url": "https://www.international-silver.com/en__/scl16",
+      "scraped_at": "2025-08-10T13:08:13.111382",
+      "title": "High polished square steel cufflinks w/ flower on black",
+      "description": "Mirror polished square cufflink made of surgical steel with a celtic cross on black enamel background. One pair",
+      "tags": [
+        "Stainless Steel",
+        "Per Piece",
+        "Flower"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/scl16_.jpg",
+      "main_image_local": "images/scl16/scl16_main.jpg",
+      "variants": []
+    },
+    {
+      "sku": "SCL17-000000",
+      "url": "https://www.international-silver.com/en__/scl17",
+      "scraped_at": "2025-08-10T13:08:16.523616",
+      "title": "Pair of polished oval steel cufflinks w/ black tribal",
+      "description": "Mirror polished oval cufflink made of surgical steel with tribal pattern design on black enamel background. One pair",
+      "tags": [
+        "Stainless Steel",
+        "Per Piece"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/scl17_.jpg",
+      "main_image_local": "images/scl17/scl17_main.jpg",
+      "variants": []
+    },
+    {
+      "sku": "SCL18-000000",
+      "url": "https://www.international-silver.com/en__/scl18",
+      "scraped_at": "2025-08-10T13:08:20.986266",
+      "title": "Pair of polished square steel cufflinks w/ grid design",
+      "description": "Mirror polished square cufflink made of surgical steel with black enamel grid design. One pair",
+      "tags": [
+        "Stainless Steel",
+        "Per Piece"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/scl18_.jpg",
+      "main_image_local": "images/scl18/scl18_main.jpg",
+      "variants": []
+    },
+    {
+      "sku": "SCL19-000000",
+      "url": "https://www.international-silver.com/en__/scl19",
+      "scraped_at": "2025-08-10T13:08:25.262599",
+      "title": "Pair of high polished steel cufflinks w/ spiral on black",
+      "description": "Mirror polished square cufflink made of surgical steel with enamel curvy design on black background. One pair",
+      "tags": [
+        "Stainless Steel",
+        "Per Piece",
+        "Flower"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/scl19_.jpg",
+      "main_image_local": "images/scl19/scl19_main.jpg",
+      "variants": []
+    },
+    {
+      "sku": "SCL24-000000",
+      "url": "https://www.international-silver.com/en__/scl24",
+      "scraped_at": "2025-08-10T13:08:29.483187",
+      "title": "Pair of high polished steel cufflinks w/ black wave",
+      "description": "Mirror polished square cufflink made of surgical steel with wavy design on black enamel background. One pair",
+      "tags": [
+        "Stainless Steel",
+        "Per Piece"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/scl24_.jpg",
+      "main_image_local": "images/scl24/scl24_main.jpg",
+      "variants": []
+    },
+    {
+      "sku": "SCL25-000000",
+      "url": "https://www.international-silver.com/en__/scl25",
+      "scraped_at": "2025-08-10T13:08:33.609497",
+      "title": "Pair of high polished steel cufflinks w/ circle & dots",
+      "description": "Mirror polished round cufflink made of surgical steel with dots design on black enamel background. One pair",
+      "tags": [
+        "Stainless Steel",
+        "Per Piece"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/scl25_.jpg",
+      "main_image_local": "images/scl25/scl25_main.jpg",
+      "variants": []
+    },
+    {
+      "sku": "SCL3-000000",
+      "url": "https://www.international-silver.com/en__/scl3",
+      "scraped_at": "2025-08-10T13:08:37.553885",
+      "title": "Pair of polished steel cufflinks w dark brown wood inlay",
+      "description": "Mirror polished square cufflink made of surgical steel with dark brown wood inlay. One pair",
+      "tags": [
+        "Stainless Steel",
+        "Per Piece"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/scl3_.jpg",
+      "main_image_local": "images/scl3/scl3_main.jpg",
+      "variants": []
+    },
+    {
+      "sku": "SNK12-000000",
+      "url": "https://www.international-silver.com/en__/snk12",
+      "scraped_at": "2025-08-10T13:08:41.586654",
+      "title": "Polished steel chain link necklace with handcuff clasp",
+      "description": "Mirror polished chain link necklace made of surgical steel with a small handcuff clasp",
+      "tags": [
+        "Stainless Steel",
+        "Per Piece"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/snk12_.jpg",
+      "main_image_local": "images/snk12/snk12_main.jpg",
+      "variants": []
+    },
+    {
+      "sku": "SNK13-000000",
+      "url": "https://www.international-silver.com/en__/snk13",
+      "scraped_at": "2025-08-10T13:08:45.550863",
+      "title": "Polished steel chain necklace with large handcuff clasp",
+      "description": "Mirror polished chain link necklace made of surgical steel with a big handcuff clasp",
+      "tags": [
+        "Stainless Steel",
+        "Per Piece"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/snk13_.jpg",
+      "main_image_local": "images/snk13/snk13_main.jpg",
+      "variants": []
+    },
+    {
+      "sku": "SNK18-000000",
+      "url": "https://www.international-silver.com/en__/snk18",
+      "scraped_at": "2025-08-10T13:08:49.979458",
+      "title": "Matte polished stainless steel succession chain necklace",
+      "description": "Matte finish succession chain necklace made of surgical steel",
+      "tags": [
+        "Per Piece"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/snk18_.jpg",
+      "main_image_local": "images/snk18/snk18_main.jpg",
+      "variants": []
+    },
+    {
+      "sku": "SNK4-000000",
+      "url": "https://www.international-silver.com/en__/snk4",
+      "scraped_at": "2025-08-10T13:08:54.212654",
+      "title": "Polished steel necklace with diamond shaped links",
+      "description": "Mirror polished necklace made of surgical steel with alternating diamond shape links",
+      "tags": [
+        "Stainless Steel",
+        "Per Piece"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/snk4_.jpg",
+      "main_image_local": "images/snk4/snk4_main.jpg",
+      "variants": []
+    },
+    {
+      "sku": "TNK1-000000",
+      "url": "https://www.international-silver.com/en__/tnk1",
+      "scraped_at": "2025-08-10T13:08:58.220179",
+      "title": "Titanium necklace with watchband-style links",
+      "description": "Necklace made of titanium grade 23 with watchband-style links",
+      "tags": [
+        "Per Piece"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/tnk1_.jpg",
+      "main_image_local": "images/tnk1/tnk1_main.jpg",
+      "variants": []
+    },
+    {
+      "sku": "XORI",
+      "url": "https://www.international-silver.com/en__/xori",
+      "scraped_at": "2025-08-10T13:09:02.271603",
+      "title": "Pack of rubber O-ring with 1.5mm thickness",
+      "description": "Black silicone O-ring with 1.5mm thickness. 10 pcs. per bag",
+      "tags": [
+        "Loose Body Jewelry Parts",
+        "Rubber",
+        "Sold by pack"
+      ],
+      "main_image": "https://www.international-silver.com/media/product/wholesale7_b/xori_loose_body_jewelry_parts_others_belly_button.jpg",
+      "main_image_local": "images/xori/xori_main.jpg",
+      "variants": [
+        {
+          "type": "standard_variant",
+          "label": "XORI",
+          "headers": [
+            "Gauge",
+            "Price / pc",
+            "Price"
+          ],
+          "items": [
+            {
+              "Gauge": "1.20mm",
+              "Price / pc": "$0.09 / pc",
+              "Price": 0.85
+            },
+            {
+              "Gauge": "1.60mm",
+              "Price / pc": "$0.09 / pc",
+              "Price": 0.85
+            },
+            {
+              "Gauge": "2.00mm",
+              "Price / pc": "$0.09 / pc",
+              "Price": 0.86
+            },
+            {
+              "Gauge": "2.50mm",
+              "Price / pc": "$0.09 / pc",
+              "Price": 0.86
+            },
+            {
+              "Gauge": "3.00mm",
+              "Price / pc": "$0.09 / pc",
+              "Price": 0.86
+            },
+            {
+              "Gauge": "4.00mm",
+              "Price / pc": "$0.09 / pc",
+              "Price": 0.86
+            },
+            {
+              "Gauge": "5.00mm",
+              "Price / pc": "$0.09 / pc",
+              "Price": 0.86
+            },
+            {
+              "Gauge": "6.00mm",
+              "Price / pc": "$0.09 / pc",
+              "Price": 0.86
+            },
+            {
+              "Gauge": "7.00mm",
+              "Price / pc": "$0.09 / pc",
+              "Price": 0.86
+            },
+            {
+              "Gauge": "8.00mm",
+              "Price / pc": "$0.09 / pc",
+              "Price": 0.86
+            },
+            {
+              "Gauge": "9.00mm",
+              "Price / pc": "$0.09 / pc",
+              "Price": 0.86
+            },
+            {
+              "Gauge": "10.00mm",
+              "Price / pc": "$0.09 / pc",
+              "Price": 0.86
+            },
+            {
+              "Gauge": "12.00mm",
+              "Price / pc": "$0.09 / pc",
+              "Price": 0.86
+            },
+            {
+              "Gauge": "14.00mm",
+              "Price / pc": "$0.09 / pc",
+              "Price": 0.91
+            },
+            {
+              "Gauge": "16.00mm",
+              "Price / pc": "$0.10 / pc",
+              "Price": 0.97
+            },
+            {
+              "Gauge": "18.00mm",
+              "Price / pc": "$0.10 / pc",
+              "Price": 1.02
+            },
+            {
+              "Gauge": "20.00mm",
+              "Price / pc": "$0.11 / pc",
+              "Price": 1.14
+            },
+            {
+              "Gauge": "22.00mm",
+              "Price / pc": "$0.13 / pc",
+              "Price": 1.25
+            },
+            {
+              "Gauge": "24.00mm",
+              "Price / pc": "$0.14 / pc",
+              "Price": 1.37
+            },
+            {
+              "Gauge": "25.00mm",
+              "Price / pc": "$0.14 / pc",
+              "Price": 1.37
+            }
+          ]
+        },
+        {
+          "type": "color_variant",
+          "label": "CZ Color",
+          "options": [
+            {
+              "name": "",
+              "image": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
