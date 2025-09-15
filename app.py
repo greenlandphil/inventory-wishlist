@@ -1,4 +1,3 @@
-The app below lets the user add products to the wishlist. Modify the application so that if the user adds the same product to the wishlist multiple times, it shows up on the wishlist once, but indicating how many times that product was selected. On the wishlist page, it should also allow the user to increase or decrease the amount of that specific product. The code for the orginal app is show below:
 
 # app.py
 # -----------------------------------------------------------------------------
