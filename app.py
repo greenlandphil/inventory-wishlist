@@ -81,7 +81,7 @@ def best_image(product: Dict[str, Any]) -> Optional[str]:
     """Prefer local image path, fall back to remote URL."""
     img_local = product.get("main_image_local")
     img_remote = product.get("main_image")
-    return img_local or img_remote
+    return img_remote
 
 
 def get_all_products(data: Dict[str, Any]) -> List[Dict[str, Any]]:
