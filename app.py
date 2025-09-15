@@ -31,6 +31,20 @@ def load_products(path: str = "products.json") -> Dict[str, Any]:
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
+def show_image_safe(img: Optional[str], caption: Optional[str] = None, fill: bool = True):
+    """
+    Safe wrapper around st.image that tolerates None/invalid images.
+    - If img is falsy, shows a subtle placeholder instead of crashing.
+    - If st.image fails (bad path/URL), shows a fallback note.
+    """
+    import streamlit as st
+    if not img:
+        st.caption("🖼️ Image not available")
+        return
+    try:
+        st.image(img, use_container_width=fill, caption=caption)
+    except Exception:
+        st.caption("🖼️ Image failed to load")
 
 def best_image(product: Dict[str, Any]) -> Optional[str]:
     #img_local = product.get("main_image_local")
@@ -302,7 +316,7 @@ def sidebar_filters(all_tags: List[str]) -> List[str]:
 
 def render_product_card(p: Dict[str, Any]):
     img = best_image(p)
-    st.image(img, use_column_width=True, caption=None)
+    show_image_safe(img, caption=None, fill=True)  # was st.image(... use_column_width=True)
     st.caption(p.get("title") or p.get("sku"))
     if st.button("View", key=f"view_{p.get('sku')}", use_container_width=True):
         go_product(p.get("sku"))
@@ -336,9 +350,9 @@ def render_product_page(product: Dict[str, Any]):
     if tags:
         st.write("**Tags:** " + ", ".join(tags))
 
+    # main product image
     img = best_image(product)
-    if img:
-        st.image(img, use_column_width=True, caption="Main image")
+    show_image_safe(img, caption="Main image", fill=True)
 
     # --- Variant selectors ---
     axes = build_variant_axes(product)
@@ -364,10 +378,11 @@ def render_product_page(product: Dict[str, Any]):
         vimg = img_map.get(chosen)
         if vimg:
             variant_preview_images.append(vimg)
-
+            
+    # variant preview image (if any)
     if variant_preview_images:
-        st.image(variant_preview_images[0], caption="Selected option preview", use_column_width=False)
-
+        show_image_safe(variant_preview_images[0], caption="Selected option preview", fill=False)
+    
     price_info = compute_price_info(product, selections)
     if price_info:
         st.markdown("**Price info (from selection):**")
@@ -416,8 +431,8 @@ def render_wishlist():
             cols = st.columns([1, 3, 1])
             with cols[0]:
                 img = item.get("variant_image") or item.get("main_image")
-                if img:
-                    st.image(img, use_column_width=True)
+                show_image_safe(img, fill=True)  # replaces st.image(... use_column_width=True)
+
             with cols[1]:
                 st.markdown(f"**{item.get('title')}**")
                 st.write(f"SKU: {item.get('sku')}")
