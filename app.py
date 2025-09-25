@@ -111,7 +111,7 @@ def build_variant_axes(product: Dict[str, Any]) -> List[Dict[str, Any]]:
     blocks = product.get("variants") or []
     for idx, v in enumerate(blocks):
         vtype = v.get("type")
-        if vtype == "standard_variant":
+        if vtype == "variant_1":
             headers = v.get("headers") or []
             items = v.get("items") or []
             for h in headers:
@@ -140,7 +140,7 @@ def build_variant_axes(product: Dict[str, Any]) -> List[Dict[str, Any]]:
                 bucket["image_map"].update(image_map)
                 bucket["source_blocks"].append(idx)
 
-        elif vtype == "color_variant":
+        elif vtype == "variant_2":
             label = v.get("label") or "Color"
             options = v.get("options") or []
             opt_names: List[str] = []
@@ -172,7 +172,7 @@ def build_variant_axes(product: Dict[str, Any]) -> List[Dict[str, Any]]:
 def compute_price_info(product: Dict[str, Any], selections: Dict[str, str]) -> Dict[str, Any]:
     price_info: Dict[str, Any] = {}
     for v in product.get("variants") or []:
-        if v.get("type") != "standard_variant":
+        if v.get("type") != "variant_1":
             continue
         headers = v.get("headers") or []
         match_headers = [h for h in headers if (h or "").strip().lower() not in _PRICEY_COLS]
