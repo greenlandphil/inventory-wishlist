@@ -388,7 +388,7 @@ def render_product_page(product: Dict[str, Any]):
         show_image_safe(
             variant_preview_images[0],
             caption="Selected option preview",
-            fill=false,
+            fill=False,
             width=100
         )
     price_info = compute_price_info(product, selections)
