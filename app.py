@@ -36,11 +36,6 @@ def load_products(path: str = "products.json") -> Dict[str, Any]:
 # app.py (Modified show_image_safe)
 
 def show_image_safe(img: Optional[str], caption: Optional[str] = None, fill: bool = True, width: Optional[int] = None): # <-- ADDED 'width'
-    """
-    Safe wrapper around st.image that tolerates None/invalid images.
-    - If img is falsy, shows a subtle placeholder instead of crashing.
-    - If st.image fails (bad path/URL), shows a fallback note.
-    """
     import streamlit as st
     if not img:
         st.caption("🖼️ Image not available")
