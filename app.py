@@ -1,15 +1,7 @@
-
-
-
 # app.py
 # -----------------------------------------------------------------------------
-# Piercing Shop Inventory & Wishlist (Streamlit Prototype) — with Quantities
-#
-# New in this version:
-#   • Wishlist items collapse by (SKU + selections) and track a `quantity`.
-#   • "Add to Wishlist" increments quantity if an identical item already exists.
-#   • Wishlist page shows ➖ / ➕ controls to adjust quantity per item.
-#   • Backward compatible: if an older session stored a list, it is auto-migrated.
+# Piercing Shop Inventory & Wishlist (Streamlit Prototype) — Quantities
+# Remote-images only; variant swatch fix; price code removed
 # -----------------------------------------------------------------------------
 
 import json
@@ -17,6 +9,7 @@ import os
 import re
 import hashlib
 from typing import Dict, List, Any, Optional, Tuple
+from urllib.parse import urlparse
 
 import streamlit as st
 
@@ -34,28 +27,58 @@ def load_products(path: str = "products.json") -> Dict[str, Any]:
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
-def show_image_safe(img: Optional[str], caption: Optional[str] = None, fill: bool = True, width: Optional[int] = None):
+
+def _infer_base_url(product: Dict[str, Any]) -> str:
+    """
+    Try to infer a sensible base url for fixing relative image paths.
+    Preference order: product['url'] domain → product['main_image'] domain → achadirect.
+    """
+    fallback = "https://www.achadirect.com"
+    for k in ("url", "main_image"):
+        u = (product.get(k) or "").strip()
+        if u.startswith("http"):
+            try:
+                p = urlparse(u)
+                if p.scheme in ("http", "https") and p.netloc:
+                    return f"{p.scheme}://{p.netloc}"
+            except Exception:
+                pass
+    return fallback
+
+
+def normalize_image_url(img: Optional[str], base_url: Optional[str] = None) -> Optional[str]:
+    """
+    Normalize possibly-relative or protocol-relative URLs to absolute HTTPS URLs.
+    """
+    if not img:
+        return None
+    s = str(img).strip()
+    if s.startswith("http://") or s.startswith("https://"):
+        return s
+    if s.startswith("//"):
+        return "https:" + s
+    if s.startswith("/"):
+        return (base_url or "https://www.achadirect.com") + s
+    # already some path or data URI; return as-is
+    return s
+
+
+def show_image_safe(img: Optional[str], caption: Optional[str] = None, fill: bool = True):
     """
     Safe wrapper around st.image that tolerates None/invalid images.
-    - If img is falsy, shows a subtle placeholder instead of crashing.
-    - If st.image fails (bad path/URL), shows a fallback note.
     """
-    import streamlit as st
     if not img:
         st.caption("🖼️ Image not available")
         return
     try:
-        if width is not None:
-            st.image(img, width=width, caption=caption)
-        else:
-            st.image(img, use_container_width=fill, caption=caption)
+        st.image(img, use_container_width=fill, caption=caption)
     except Exception:
         st.caption("🖼️ Image failed to load")
 
+
 def best_image(product: Dict[str, Any]) -> Optional[str]:
-    #img_local = product.get("main_image_local")
-    img_remote = product.get("main_image")
-    return img_remote
+    # Remote-only main image
+    return product.get("main_image")
 
 
 def get_all_products(data: Dict[str, Any]) -> List[Dict[str, Any]]:
@@ -104,7 +127,11 @@ def normalize_axis_label(raw_label: str, option_names: List[str]) -> str:
     return label or "Option"
 
 
-_PRICEY_COLS = {"price", "price / pc", "price/pc", "price per pc", "price per pair", "price per piece"}
+# Keep this only to IGNORE price-like columns from selection axes.
+_PRICEY_COLS = {
+    "price", "price / pc", "price/pc", "price per pc",
+    "price per pair", "price per piece", "price / pair"
+}
 
 
 def _clean_option_name(name: Any) -> str:
@@ -113,28 +140,38 @@ def _clean_option_name(name: Any) -> str:
 
 
 def build_variant_axes(product: Dict[str, Any]) -> List[Dict[str, Any]]:
+    """
+    Merge both variant blocks into logical axes with:
+      - label
+      - options (list of names)
+      - image_map (name -> absolute URL)
+    Remote URLs only, normalized.
+    """
+    base_url = _infer_base_url(product)
     axes_by_label: Dict[str, Dict[str, Any]] = {}
+
     blocks = product.get("variants") or []
     for idx, v in enumerate(blocks):
         vtype = v.get("type")
+
         if vtype == "variant_1":
             headers = v.get("headers") or []
             items = v.get("items") or []
             for h in headers:
                 if (h or "").strip().lower() in _PRICEY_COLS:
-                    continue
+                    continue  # ignore price-like columns entirely
+
                 options_order: List[str] = []
                 image_map: Dict[str, str] = {}
                 for row in items:
                     val = _clean_option_name(row.get(h))
                     if val and val not in options_order:
                         options_order.append(val)
-                    img_local = row.get("image_local")
-                    img = row.get("image")
-                    if img_local:
-                        image_map[val] = img_local
-                    elif img:
-                        image_map[val] = img
+                    # Some variant_1 rows include an 'image' swatch (e.g., Crystal Color)
+                    remote = normalize_image_url(row.get("image"), base_url)
+                    if remote:
+                        image_map[val] = remote
+
                 normalized = normalize_axis_label(h, options_order)
                 bucket = axes_by_label.setdefault(
                     normalized,
@@ -154,12 +191,10 @@ def build_variant_axes(product: Dict[str, Any]) -> List[Dict[str, Any]]:
             for opt in options:
                 name = _clean_option_name(opt.get("name"))
                 opt_names.append(name)
-                img_local = opt.get("image_local")
-                img = opt.get("image")
-                if img_local:
-                    image_map[name] = img_local
-                elif img:
-                    image_map[name] = img
+                remote = normalize_image_url(opt.get("image"), _infer_base_url(product))
+                if remote:
+                    image_map[name] = remote
+
             normalized = normalize_axis_label(label, opt_names)
             bucket = axes_by_label.setdefault(
                 normalized,
@@ -175,39 +210,12 @@ def build_variant_axes(product: Dict[str, Any]) -> List[Dict[str, Any]]:
     return sorted(axes_by_label.values(), key=lambda ax: (priority.get(ax["label"], 99), ax["label"]))
 
 
-def compute_price_info(product: Dict[str, Any], selections: Dict[str, str]) -> Dict[str, Any]:
-    price_info: Dict[str, Any] = {}
-    for v in product.get("variants") or []:
-        if v.get("type") != "variant_1":
-            continue
-        headers = v.get("headers") or []
-        match_headers = [h for h in headers if (h or "").strip().lower() not in _PRICEY_COLS]
-        if not match_headers:
-            continue
-        for row in v.get("items") or []:
-            ok = True
-            for h in match_headers:
-                norm_label = normalize_axis_label(h, [])
-                sel_val = selections.get(norm_label)
-                if sel_val is None:
-                    continue
-                if _clean_option_name(row.get(h)) != sel_val:
-                    ok = False
-                    break
-            if ok:
-                if "Price" in row and isinstance(row["Price"], (int, float)):
-                    price_info["Price"] = row["Price"]
-                if "Price / pc" in row and isinstance(row["Price / pc"], str):
-                    price_info["Price / pc"] = row["Price / pc"]
-                break
-    return price_info
-
-
 # ------------------------------ Wishlist Helpers ------------------------------
+
 
 def ensure_session_defaults():
     st.session_state.setdefault("page", "login")
-    st.session_state.setdefault("wishlist", {})  # now a dict keyed by item_key
+    st.session_state.setdefault("wishlist", {})  # dict keyed by item_key
     st.session_state.setdefault("selected_sku", None)
     st.session_state.setdefault("username", "")
 
@@ -216,7 +224,6 @@ def ensure_session_defaults():
         old_list = st.session_state["wishlist"]
         st.session_state["wishlist"] = {}
         for it in old_list:
-            # treat each legacy entry as quantity 1
             key = make_item_key(it.get("sku"), it.get("selections") or {})
             st.session_state["wishlist"][key] = {
                 **it,
@@ -235,7 +242,6 @@ def go_product(sku: str):
 
 
 def selections_key(selections: Dict[str, str]) -> str:
-    # stable order key: "Color:Blue|Length:8.00mm"
     if not selections:
         return ""
     parts = [f"{k}:{v}" for k, v in sorted(selections.items(), key=lambda kv: kv[0].lower())]
@@ -244,12 +250,10 @@ def selections_key(selections: Dict[str, str]) -> str:
 
 def make_item_key(sku: Optional[str], selections: Dict[str, str]) -> str:
     base = f"{sku or ''}||{selections_key(selections)}"
-    # compact, safe key for Streamlit widget IDs
     return hashlib.md5(base.encode("utf-8")).hexdigest()
 
 
 def wishlist_counts() -> Tuple[int, int]:
-    """Return (unique_lines, total_quantity)."""
     wl = st.session_state.get("wishlist", {})
     if not isinstance(wl, dict):
         return (len(wl), len(wl))
@@ -259,13 +263,14 @@ def wishlist_counts() -> Tuple[int, int]:
 
 
 def wishlist_add(item: Dict[str, Any]):
-    """Add or increment an item (by SKU + selections)."""
+    """
+    Add or increment an item (by SKU + selections).
+    Stores 'variant_image' (a swatch or per-option preview if available).
+    """
     wl: Dict[str, Dict[str, Any]] = st.session_state["wishlist"]
     key = make_item_key(item.get("sku"), item.get("selections") or {})
     if key in wl:
         wl[key]["quantity"] = int(wl[key].get("quantity", 1)) + 1
-        # keep latest price/variant image if you prefer; or preserve original
-        wl[key]["price_info"] = item.get("price_info") or wl[key].get("price_info")
         wl[key]["variant_image"] = item.get("variant_image") or wl[key].get("variant_image")
     else:
         wl[key] = {**item, "quantity": 1}
@@ -321,8 +326,8 @@ def sidebar_filters(all_tags: List[str]) -> List[str]:
 
 
 def render_product_card(p: Dict[str, Any]):
-    img = best_image(p)
-    show_image_safe(img, caption=None, fill=True)  # was st.image(... use_column_width=True)
+    img = normalize_image_url(best_image(p), _infer_base_url(p))
+    show_image_safe(img, caption=None, fill=True)
     st.caption(p.get("title") or p.get("sku"))
     if st.button("View", key=f"view_{p.get('sku')}", use_container_width=True):
         go_product(p.get("sku"))
@@ -357,8 +362,8 @@ def render_product_page(product: Dict[str, Any]):
         st.write("**Tags:** " + ", ".join(tags))
 
     # main product image
-    img = best_image(product)
-    show_image_safe(img, caption="Main image", fill=True)
+    main_img = normalize_image_url(best_image(product), _infer_base_url(product))
+    show_image_safe(main_img, caption="Main image", fill=True)
 
     # --- Variant selectors ---
     axes = build_variant_axes(product)
@@ -367,12 +372,14 @@ def render_product_page(product: Dict[str, Any]):
 
     if axes:
         st.subheader("Select options")
+
     for ax in axes:
         label = ax["label"]
         options = ax["options"] or ["Unspecified"]
         key = f"sel_{product.get('sku')}_{label}"
         if key not in st.session_state:
             st.session_state[key] = options[0]
+
         chosen = st.selectbox(
             label,
             options,
@@ -380,33 +387,27 @@ def render_product_page(product: Dict[str, Any]):
             key=key,
         )
         selections[label] = chosen
+
+        # swatch/preview image for this option (if any)
         img_map = ax.get("image_map") or {}
         vimg = img_map.get(chosen)
         if vimg:
-            variant_preview_images.append(vimg)
-    if variant_preview_images:
-        show_image_safe(
-            variant_preview_images[0],
-            caption="Selected option preview",
-            fill=False,
-            width=100
-        )
-    price_info = compute_price_info(product, selections)
-    if price_info:
-        st.markdown("**Price info (from selection):**")
-        for k, v in price_info.items():
-            st.write(f"- {k}: {v}")
+            variant_preview_images.append(normalize_image_url(vimg, _infer_base_url(product)))
 
-    # Add to wishlist (now increments quantity if same SKU+selections exist)
+    # show the first available variant preview (often Color or Crystal Color)
+    if variant_preview_images:
+        show_image_safe(variant_preview_images[0], caption="Selected option preview", fill=False)
+
+    # Add to wishlist
     def on_add():
         item = {
             "sku": product.get("sku"),
             "title": product.get("title") or product.get("sku"),
-            "main_image": best_image(product),
+            "main_image": normalize_image_url(best_image(product), _infer_base_url(product)),
             "url": product.get("url"),
             "selections": selections.copy(),
+            # store one best swatch/variant preview if available
             "variant_image": variant_preview_images[0] if variant_preview_images else None,
-            "price_info": price_info,
         }
         wishlist_add(item)
         st.success("Added to wishlist!")
@@ -420,8 +421,7 @@ def render_wishlist():
 
     st.info(
         "Prototype note: Wishlist lives only in this browser session via `st.session_state`.\n\n"
-        "In a production Django/Flask app, you'd persist wishlists to a database (e.g., Postgres) "
-        "linked to the authenticated user, so they survive refresh and are available across devices."
+        "In production (Django/Flask), persist wishlists to a database linked to the authenticated user."
     )
 
     wl: Dict[str, Dict[str, Any]] = st.session_state.get("wishlist", {})
@@ -432,30 +432,31 @@ def render_wishlist():
     unique, total_qty = wishlist_counts()
     st.caption(f"**Unique lines:** {unique} | **Total quantity selected:** {total_qty}")
 
-    # Render each line (quantity-aware)
     for key, item in wl.items():
         qty = int(item.get("quantity", 1))
         with st.container(border=True):
             cols = st.columns([1, 3, 1])
             with cols[0]:
-                img = item.get("main_image")
-                show_image_safe(img, fill=True)  # replaces st.image(... use_column_width=True)
+                show_image_safe(item.get("main_image"), fill=True)
 
             with cols[1]:
                 st.markdown(f"**{item.get('title')}**")
                 st.write(f"SKU: {item.get('sku')}")
                 if item.get("selections"):
                     st.write("**Selected options:**")
+                    # Render each selection; if a swatch image exists, show it inline
                     for k, v in item["selections"].items():
-                        st.write(f"- {k}: {v}")
-                if item.get("price_info"):
-                    st.write("**Price info:**")
-                    for k2, v2 in item["price_info"].items():
-                        st.write(f"- {k2}: {v2}")
+                        row_cols = st.columns([3, 2])
+                        with row_cols[0]:
+                            st.write(f"- {k}: {v}")
+                        with row_cols[1]:
+                            if item.get("variant_image") and k.lower() in {"color", "crystal color"}:
+                                # small swatch beside the color-like selection
+                                show_image_safe(item["variant_image"], fill=False)
                 if item.get("url"):
                     st.link_button("Open product page", item["url"])
+
             with cols[2]:
-                # Quantity controls
                 qcols = st.columns([1, 1, 2])
                 with qcols[0]:
                     st.button("➖", key=f"dec_{key}", use_container_width=True, on_click=wishlist_dec, args=(key,))
@@ -508,8 +509,8 @@ def page_product(data: Dict[str, Any]):
 
 
 def page_wishlist(data: Dict[str, Any]):
-    _ = get_all_products(data)  # not used directly here, but kept for parity
-    top_nav(len(_))
+    products = get_all_products(data)
+    top_nav(len(products))
     render_wishlist()
 
 
