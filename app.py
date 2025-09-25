@@ -35,8 +35,7 @@ def load_products(path: str = "products.json") -> Dict[str, Any]:
 
 
 def show_image_safe(img: Optional[str], caption: Optional[str] = None, fill: bool = True, width: Optional[int] = None):
-    import streamlit as st
-    if not img:
+    if not img:
         st.caption("🖼️ Image not available")
         return
     try:
