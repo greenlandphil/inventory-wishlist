@@ -33,7 +33,6 @@ def load_products(path: str = "products.json") -> Dict[str, Any]:
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
-
 def show_image_safe(img: Optional[str], caption: Optional[str] = None, fill: bool = True, width: Optional[int] = None):
     if not img:
         st.caption("🖼️ Image not available")
