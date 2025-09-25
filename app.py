@@ -1,9 +1,9 @@
 # app.py
 # -----------------------------------------------------------------------------
 # Piercing Shop Inventory & Wishlist (Streamlit Prototype)
+# - Multi-image schema only: main_images[] + main_images_local[]
+# - Product page CAROUSEL (Prev/Next + dots)
 # - Remote-first images with LOCAL fallback (main + swatches)
-# - Uses multi-image schema: main_images[] + main_images_local[]
-# - Product page image slider (if multiple images)
 # - Pricing removed (headers ignored; no price UI)
 # -----------------------------------------------------------------------------
 
@@ -34,29 +34,22 @@ def load_products(path: str = "products.json") -> Dict[str, Any]:
 def _infer_base_url(product: Dict[str, Any]) -> str:
     """
     Infer a base URL for resolving protocol/relative paths.
-    Preference: product['url'] domain → product['main_image(s)'][0] domain → achadirect.com
+    Preference: product['url'] domain → first main image domain → achadirect.com
     """
     fallback = "https://www.achadirect.com"
 
-    for key in ("url",):
-        u = (product.get(key) or "").strip()
-        if u.startswith("http"):
-            try:
-                p = urlparse(u)
-                if p.scheme in ("http", "https") and p.netloc:
-                    return f"{p.scheme}://{p.netloc}"
-            except Exception:
-                pass
+    u = (product.get("url") or "").strip()
+    if u.startswith("http"):
+        try:
+            p = urlparse(u)
+            if p.scheme in ("http", "https") and p.netloc:
+                return f"{p.scheme}://{p.netloc}"
+        except Exception:
+            pass
 
-    # Peek at first main image if present
-    candidates = []
-    if isinstance(product.get("main_images"), list) and product["main_images"]:
-        candidates.append(product["main_images"][0])
-    if product.get("main_image"):
-        candidates.append(product["main_image"])
-
-    for u in candidates:
-        u = (u or "").strip()
+    imgs = product.get("main_images") or []
+    if imgs:
+        u = str(imgs[0]).strip()
         if u.startswith("http"):
             try:
                 p = urlparse(u)
@@ -115,31 +108,16 @@ def show_image_with_fallback(remote: Optional[str], local: Optional[str], captio
     st.caption("🖼️ Image not available")
 
 
-# ---------- Multi-image helpers (backward-compatible with single-image schema)
-
 def build_main_image_pairs(product: Dict[str, Any]) -> List[Tuple[Optional[str], Optional[str]]]:
     """
-    Build ordered list of (remote, local) main image pairs using the new arrays:
+    Build ordered list of (remote, local) image pairs using:
       - main_images:        List[str] of remote URLs
       - main_images_local:  List[str] of local paths
-    Backward compatible with single-image keys:
-      - main_image, main_image_local
     Pairing is by index; if lists differ in length, missing side becomes None.
     """
     base = _infer_base_url(product)
-
-    # New schema
-    remotes = product.get("main_images")
-    locals_ = product.get("main_images_local")
-
-    # Backward-compat fallback
-    if remotes is None and product.get("main_image"):
-        remotes = [product.get("main_image")]
-    if locals_ is None and product.get("main_image_local"):
-        locals_ = [product.get("main_image_local")]
-
-    remotes = [normalize_image_url(u, base) for u in (remotes or [])]
-    locals_ = [normalize_local_path(p) for p in (locals_ or [])]
+    remotes = [normalize_image_url(u, base) for u in (product.get("main_images") or [])]
+    locals_ = [normalize_local_path(p) for p in (product.get("main_images_local") or [])]
 
     n = max(len(remotes), len(locals_))
     pairs: List[Tuple[Optional[str], Optional[str]]] = []
@@ -149,7 +127,6 @@ def build_main_image_pairs(product: Dict[str, Any]) -> List[Tuple[Optional[str],
         if r or l:
             pairs.append((r, l))
 
-    # If both are empty, create a single empty pair to simplify callers.
     if not pairs:
         pairs.append((None, None))
 
@@ -306,7 +283,7 @@ def ensure_session_defaults():
     st.session_state.setdefault("selected_sku", None)
     st.session_state.setdefault("username", "")
 
-    # Backward-compat: migrate old list → dict (quantity=1 each)
+    # If any legacy list exists (rare), migrate to dict (quantity=1 each)
     if isinstance(st.session_state["wishlist"], list):
         old_list = st.session_state["wishlist"]
         st.session_state["wishlist"] = {}
@@ -358,7 +335,6 @@ def wishlist_add(item: Dict[str, Any]):
     key = make_item_key(item.get("sku"), item.get("selections") or {})
     if key in wl:
         wl[key]["quantity"] = int(wl[key].get("quantity", 1)) + 1
-        # Update images if provided
         for k in ("variant_image_remote", "variant_image_local", "main_image_remote", "main_image_local"):
             if item.get(k):
                 wl[key][k] = item[k]
@@ -416,7 +392,6 @@ def sidebar_filters(all_tags: List[str]) -> List[str]:
 
 
 def render_product_card(p: Dict[str, Any]):
-    # Use the first main image pair (remote-first, local fallback)
     pairs = build_main_image_pairs(p)
     r0, l0 = pairs[0] if pairs else (None, None)
     show_image_with_fallback(r0, l0, caption=None, fill=True)
@@ -442,6 +417,54 @@ def render_gallery(products: List[Dict[str, Any]]):
                 render_product_card(products[idx])
 
 
+# ------------------------------ Carousel --------------------------------------
+
+def render_image_carousel(pairs: List[Tuple[Optional[str], Optional[str]]], key_prefix: str):
+    """
+    Simple carousel with Prev/Next buttons and dot indicators.
+    Displays the current image with remote-first + local fallback.
+    """
+    n = len(pairs)
+    if n == 0:
+        show_image_with_fallback(None, None, caption="Main image", fill=True)
+        return
+    if n == 1:
+        r, l = pairs[0]
+        show_image_with_fallback(r, l, caption="Main image", fill=True)
+        return
+
+    idx_key = f"{key_prefix}_carousel_idx"
+    st.session_state.setdefault(idx_key, 0)
+    cur = int(st.session_state[idx_key]) % n
+
+    # Controls row: Prev | Image | Next
+    cprev, cimg, cnext = st.columns([1, 8, 1])
+
+    def set_idx(new_i: int):
+        st.session_state[idx_key] = new_i % n
+
+    with cprev:
+        if st.button("◀", key=f"{key_prefix}_prev", use_container_width=True):
+            set_idx(cur - 1)
+
+    with cimg:
+        r, l = pairs[cur]
+        show_image_with_fallback(r, l, caption=f"{cur+1}/{n}", fill=True)
+
+    with cnext:
+        if st.button("▶", key=f"{key_prefix}_next", use_container_width=True):
+            set_idx(cur + 1)
+
+    # Dot indicators (clickable)
+    dot_cols = st.columns(n if n <= 8 else 8)  # cap row width; if more than 8, still show first 8
+    for i in range(min(n, 8)):
+        with dot_cols[i]:
+            label = "●" if i == cur else "○"
+            st.button(label, key=f"{key_prefix}_dot_{i}", on_click=set_idx, args=(i,), use_container_width=True)
+
+
+# ------------------------------ Product & Wishlist Pages -----------------------
+
 def render_product_page(product: Dict[str, Any]):
     st.button("← Back to Gallery", on_click=lambda: set_page("main"))
     st.header(product.get("title") or product.get("sku"))
@@ -453,17 +476,10 @@ def render_product_page(product: Dict[str, Any]):
     if tags:
         st.write("**Tags:** " + ", ".join(tags))
 
-    # --- Main images: slider if multiple, else single ---
+    # --- Main images: carousel ---
     pairs = build_main_image_pairs(product)
-    sku = product.get("sku") or "SKU"
-    if len(pairs) > 1:
-        st.subheader("Images")
-        idx = st.slider("Image", min_value=1, max_value=len(pairs), value=1, key=f"img_slider_{sku}")
-        r, l = pairs[idx - 1]
-        show_image_with_fallback(r, l, caption=f"{idx}/{len(pairs)}", fill=True)
-    else:
-        r, l = pairs[0] if pairs else (None, None)
-        show_image_with_fallback(r, l, caption="Main image", fill=True)
+    st.subheader("Images")
+    render_image_carousel(pairs, key_prefix=f"{product.get('sku') or 'SKU'}")
 
     # --- Variant selectors ---
     axes = build_variant_axes(product)
@@ -506,7 +522,7 @@ def render_product_page(product: Dict[str, Any]):
             fill=False
         )
 
-    # Add to wishlist (store the FIRST main image pair for the card thumb)
+    # Add to wishlist (store the FIRST main image pair as thumbnail)
     def on_add():
         main_remote, main_local = pairs[0] if pairs else (None, None)
         item = {
@@ -563,7 +579,7 @@ def render_wishlist():
                         with row_cols[0]:
                             st.write(f"- {k}: {v}")
                         with row_cols[1]:
-                            # show swatch beside color-like selections, using remote-first with local fallback
+                            # show swatch beside color-like selections, remote-first with local fallback
                             if k.lower() in {"color", "crystal color"}:
                                 show_image_with_fallback(
                                     item.get("variant_image_remote"),
@@ -636,7 +652,7 @@ def page_wishlist(data: Dict[str, Any]):
 
 def main():
     ensure_session_defaults()
-    data = load_products("products.json")  # Put your new multi-image JSON here
+    data = load_products("products.json")  # Use your multi-image JSON here
 
     if st.session_state.get("page") != "login":
         with st.sidebar.expander("Navigation", expanded=True):
