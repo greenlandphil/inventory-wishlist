@@ -34,7 +34,7 @@ def load_products(path: str = "products.json") -> Dict[str, Any]:
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
-def show_image_safe(img: Optional[str], caption: Optional[str] = None, fill: bool = True. width: Optional[int] = None):
+def show_image_safe(img: Optional[str], caption: Optional[str] = None, fill: bool = True, width: Optional[int] = None):
     """
     Safe wrapper around st.image that tolerates None/invalid images.
     - If img is falsy, shows a subtle placeholder instead of crashing.
