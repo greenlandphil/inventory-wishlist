@@ -430,7 +430,7 @@ def render_wishlist():
         with st.container(border=True):
             cols = st.columns([1, 3, 1])
             with cols[0]:
-                img = item.get("variant_image") or item.get("main_image")
+                img = item.get("main_image")
                 show_image_safe(img, fill=True)  # replaces st.image(... use_column_width=True)
 
             with cols[1]:
