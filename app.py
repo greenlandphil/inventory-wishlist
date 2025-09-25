@@ -1,8 +1,10 @@
 # app.py
 # -----------------------------------------------------------------------------
-# Piercing Shop Inventory & Wishlist (Streamlit Prototype) — Quantities
-# Remote-first images with local fallback for main images & variant swatches
-# Price code removed
+# Piercing Shop Inventory & Wishlist (Streamlit Prototype)
+# - Remote-first images with LOCAL fallback (main + swatches)
+# - Uses multi-image schema: main_images[] + main_images_local[]
+# - Product page image slider (if multiple images)
+# - Pricing removed (headers ignored; no price UI)
 # -----------------------------------------------------------------------------
 
 import json
@@ -31,12 +33,13 @@ def load_products(path: str = "products.json") -> Dict[str, Any]:
 
 def _infer_base_url(product: Dict[str, Any]) -> str:
     """
-    Try to infer a sensible base url for fixing relative image paths.
-    Preference order: product['url'] domain → product['main_image'] domain → achadirect.
+    Infer a base URL for resolving protocol/relative paths.
+    Preference: product['url'] domain → product['main_image(s)'][0] domain → achadirect.com
     """
     fallback = "https://www.achadirect.com"
-    for k in ("url", "main_image"):
-        u = (product.get(k) or "").strip()
+
+    for key in ("url",):
+        u = (product.get(key) or "").strip()
         if u.startswith("http"):
             try:
                 p = urlparse(u)
@@ -44,6 +47,24 @@ def _infer_base_url(product: Dict[str, Any]) -> str:
                     return f"{p.scheme}://{p.netloc}"
             except Exception:
                 pass
+
+    # Peek at first main image if present
+    candidates = []
+    if isinstance(product.get("main_images"), list) and product["main_images"]:
+        candidates.append(product["main_images"][0])
+    if product.get("main_image"):
+        candidates.append(product["main_image"])
+
+    for u in candidates:
+        u = (u or "").strip()
+        if u.startswith("http"):
+            try:
+                p = urlparse(u)
+                if p.scheme in ("http", "https") and p.netloc:
+                    return f"{p.scheme}://{p.netloc}"
+            except Exception:
+                pass
+
     return fallback
 
 
@@ -70,9 +91,7 @@ def normalize_local_path(path: Optional[str]) -> Optional[str]:
     """
     if not path:
         return None
-    # Convert backslashes to forward slashes so Streamlit on any OS can read it
-    p = path.replace("\\", "/")
-    return p
+    return path.replace("\\", "/")
 
 
 def show_image_with_fallback(remote: Optional[str], local: Optional[str], caption: Optional[str] = None, fill: bool = True):
@@ -96,22 +115,56 @@ def show_image_with_fallback(remote: Optional[str], local: Optional[str], captio
     st.caption("🖼️ Image not available")
 
 
-def pick_image(remote: Optional[str], local: Optional[str]) -> Optional[str]:
-    """
-    Return remote if provided, else local. (Convenience for simple cases.)
-    """
-    return remote or local
+# ---------- Multi-image helpers (backward-compatible with single-image schema)
 
-
-def best_image_pair(product: Dict[str, Any]) -> Tuple[Optional[str], Optional[str]]:
+def build_main_image_pairs(product: Dict[str, Any]) -> List[Tuple[Optional[str], Optional[str]]]:
     """
-    Return (remote_url, local_path) for the product's main image.
+    Build ordered list of (remote, local) main image pairs using the new arrays:
+      - main_images:        List[str] of remote URLs
+      - main_images_local:  List[str] of local paths
+    Backward compatible with single-image keys:
+      - main_image, main_image_local
+    Pairing is by index; if lists differ in length, missing side becomes None.
     """
     base = _infer_base_url(product)
-    remote = normalize_image_url(product.get("main_image"), base)
-    local = normalize_local_path(product.get("main_image_local"))
-    return remote, local
 
+    # New schema
+    remotes = product.get("main_images")
+    locals_ = product.get("main_images_local")
+
+    # Backward-compat fallback
+    if remotes is None and product.get("main_image"):
+        remotes = [product.get("main_image")]
+    if locals_ is None and product.get("main_image_local"):
+        locals_ = [product.get("main_image_local")]
+
+    remotes = [normalize_image_url(u, base) for u in (remotes or [])]
+    locals_ = [normalize_local_path(p) for p in (locals_ or [])]
+
+    n = max(len(remotes), len(locals_))
+    pairs: List[Tuple[Optional[str], Optional[str]]] = []
+    for i in range(n):
+        r = remotes[i] if i < len(remotes) else None
+        l = locals_[i] if i < len(locals_) else None
+        if r or l:
+            pairs.append((r, l))
+
+    # If both are empty, create a single empty pair to simplify callers.
+    if not pairs:
+        pairs.append((None, None))
+
+    # Deduplicate while preserving order
+    dedup: List[Tuple[Optional[str], Optional[str]]] = []
+    seen = set()
+    for pr in pairs:
+        key = (pr[0] or "", pr[1] or "")
+        if key not in seen:
+            seen.add(key)
+            dedup.append(pr)
+    return dedup
+
+
+# ------------------------------ Filtering & Variants ---------------------------
 
 def get_all_products(data: Dict[str, Any]) -> List[Dict[str, Any]]:
     return data.get("products", [])
@@ -159,7 +212,7 @@ def normalize_axis_label(raw_label: str, option_names: List[str]) -> str:
     return label or "Option"
 
 
-# Only used to IGNORE price-like columns from selection axes (no pricing shown)
+# Ignore price-like columns when building axes (we don't show prices)
 _PRICEY_COLS = {
     "price", "price / pc", "price/pc", "price per pc",
     "price per pair", "price per piece", "price / pair"
@@ -177,7 +230,6 @@ def build_variant_axes(product: Dict[str, Any]) -> List[Dict[str, Any]]:
       - label
       - options (list of names)
       - image_map: name -> {"remote": str|None, "local": str|None}
-    URLs are normalized; local paths are normalized to forward slashes.
     """
     base_url = _infer_base_url(product)
     axes_by_label: Dict[str, Dict[str, Any]] = {}
@@ -199,7 +251,7 @@ def build_variant_axes(product: Dict[str, Any]) -> List[Dict[str, Any]]:
                     val = _clean_option_name(row.get(h))
                     if val and val not in options_order:
                         options_order.append(val)
-                    # Some variant_1 rows include a swatch image
+                    # Some variant_1 rows include a swatch image pair
                     remote = normalize_image_url(row.get("image"), base_url)
                     local = normalize_local_path(row.get("image_local"))
                     if remote or local:
@@ -213,7 +265,6 @@ def build_variant_axes(product: Dict[str, Any]) -> List[Dict[str, Any]]:
                 for opt in options_order:
                     if opt not in bucket["options"]:
                         bucket["options"].append(opt)
-                # merge image maps
                 for k, vdict in image_map.items():
                     bucket["image_map"][k] = vdict
                 bucket["source_blocks"].append(idx)
@@ -248,7 +299,6 @@ def build_variant_axes(product: Dict[str, Any]) -> List[Dict[str, Any]]:
 
 
 # ------------------------------ Wishlist Helpers ------------------------------
-
 
 def ensure_session_defaults():
     st.session_state.setdefault("page", "login")
@@ -302,20 +352,16 @@ def wishlist_counts() -> Tuple[int, int]:
 def wishlist_add(item: Dict[str, Any]):
     """
     Add or increment an item (by SKU + selections).
-    Stores both 'variant_image_remote' and 'variant_image_local' for robust display.
+    Stores both variant and main image pairs for robust re-display.
     """
     wl: Dict[str, Dict[str, Any]] = st.session_state["wishlist"]
     key = make_item_key(item.get("sku"), item.get("selections") or {})
     if key in wl:
         wl[key]["quantity"] = int(wl[key].get("quantity", 1)) + 1
-        # Keep the latest variant image pair if provided
-        if item.get("variant_image_remote") or item.get("variant_image_local"):
-            wl[key]["variant_image_remote"] = item.get("variant_image_remote") or wl[key].get("variant_image_remote")
-            wl[key]["variant_image_local"] = item.get("variant_image_local") or wl[key].get("variant_image_local")
-        # Update main image pair as well
-        if item.get("main_image_remote") or item.get("main_image_local"):
-            wl[key]["main_image_remote"] = item.get("main_image_remote") or wl[key].get("main_image_remote")
-            wl[key]["main_image_local"] = item.get("main_image_local") or wl[key].get("main_image_local")
+        # Update images if provided
+        for k in ("variant_image_remote", "variant_image_local", "main_image_remote", "main_image_local"):
+            if item.get(k):
+                wl[key][k] = item[k]
     else:
         wl[key] = {**item, "quantity": 1}
     st.session_state["wishlist"] = wl
@@ -355,7 +401,7 @@ def wishlist_remove(key: str):
 def top_nav(products_count: int):
     if st.session_state.get("page") == "login":
         return
-    unique, total_qty = wishlist_counts()
+    unique, _total_qty = wishlist_counts()
     left, right = st.columns([3, 1])
     with left:
         st.markdown(f"### Piercing Shop Inventory — {products_count} products")
@@ -370,10 +416,10 @@ def sidebar_filters(all_tags: List[str]) -> List[str]:
 
 
 def render_product_card(p: Dict[str, Any]):
-    base = _infer_base_url(p)
-    main_remote = normalize_image_url(p.get("main_image"), base)
-    main_local = normalize_local_path(p.get("main_image_local"))
-    show_image_with_fallback(main_remote, main_local, caption=None, fill=True)
+    # Use the first main image pair (remote-first, local fallback)
+    pairs = build_main_image_pairs(p)
+    r0, l0 = pairs[0] if pairs else (None, None)
+    show_image_with_fallback(r0, l0, caption=None, fill=True)
     st.caption(p.get("title") or p.get("sku"))
     if st.button("View", key=f"view_{p.get('sku')}", use_container_width=True):
         go_product(p.get("sku"))
@@ -407,9 +453,17 @@ def render_product_page(product: Dict[str, Any]):
     if tags:
         st.write("**Tags:** " + ", ".join(tags))
 
-    # main product image (remote-first, local fallback)
-    main_remote, main_local = best_image_pair(product)
-    show_image_with_fallback(main_remote, main_local, caption="Main image", fill=True)
+    # --- Main images: slider if multiple, else single ---
+    pairs = build_main_image_pairs(product)
+    sku = product.get("sku") or "SKU"
+    if len(pairs) > 1:
+        st.subheader("Images")
+        idx = st.slider("Image", min_value=1, max_value=len(pairs), value=1, key=f"img_slider_{sku}")
+        r, l = pairs[idx - 1]
+        show_image_with_fallback(r, l, caption=f"{idx}/{len(pairs)}", fill=True)
+    else:
+        r, l = pairs[0] if pairs else (None, None)
+        show_image_with_fallback(r, l, caption="Main image", fill=True)
 
     # --- Variant selectors ---
     axes = build_variant_axes(product)
@@ -445,16 +499,21 @@ def render_product_page(product: Dict[str, Any]):
 
     # show the first available variant preview (often Color or Crystal Color)
     if any(variant_preview_pair):
-        show_image_with_fallback(variant_preview_pair[0], normalize_local_path(variant_preview_pair[1]),
-                                 caption="Selected option preview", fill=False)
+        show_image_with_fallback(
+            variant_preview_pair[0],
+            normalize_local_path(variant_preview_pair[1]),
+            caption="Selected option preview",
+            fill=False
+        )
 
-    # Add to wishlist (store both remote+local pairs for robust re-display)
+    # Add to wishlist (store the FIRST main image pair for the card thumb)
     def on_add():
+        main_remote, main_local = pairs[0] if pairs else (None, None)
         item = {
             "sku": product.get("sku"),
             "title": product.get("title") or product.get("sku"),
             "main_image_remote": main_remote,
-            "main_image_local": main_local,
+            "main_image_local": normalize_local_path(main_local),
             "url": product.get("url"),
             "selections": selections.copy(),
             "variant_image_remote": variant_preview_pair[0],
@@ -577,7 +636,7 @@ def page_wishlist(data: Dict[str, Any]):
 
 def main():
     ensure_session_defaults()
-    data = load_products("products.json")
+    data = load_products("products.json")  # Put your new multi-image JSON here
 
     if st.session_state.get("page") != "login":
         with st.sidebar.expander("Navigation", expanded=True):
