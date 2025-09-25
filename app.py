@@ -1,9 +1,8 @@
 # app.py
 # -----------------------------------------------------------------------------
 # Piercing Shop Inventory & Wishlist (Streamlit Prototype) — Quantities
-# Remote-first images with LOCAL fallback (main + swatches)
-# NEW: Product page "image slider" gallery (_2, _3, ...) when available
-# Pricing removed
+# Remote-first images with local fallback for main images & variant swatches
+# Price code removed
 # -----------------------------------------------------------------------------
 
 import json
@@ -72,20 +71,8 @@ def normalize_local_path(path: Optional[str]) -> Optional[str]:
     if not path:
         return None
     # Convert backslashes to forward slashes so Streamlit on any OS can read it
-    return path.replace("\\", "/")
-
-
-def add_suffix_before_ext(path: str, suffix: str) -> str:
-    """
-    Insert a suffix (e.g., '_2') before the last file extension.
-    'a/b.jpg' -> 'a/b_2.jpg'
-    """
-    if not path:
-        return path
-    if "." not in path:
-        return path + suffix
-    stem, ext = path.rsplit(".", 1)
-    return f"{stem}{suffix}.{ext}"
+    p = path.replace("\\", "/")
+    return p
 
 
 def show_image_with_fallback(remote: Optional[str], local: Optional[str], caption: Optional[str] = None, fill: bool = True):
@@ -109,6 +96,13 @@ def show_image_with_fallback(remote: Optional[str], local: Optional[str], captio
     st.caption("🖼️ Image not available")
 
 
+def pick_image(remote: Optional[str], local: Optional[str]) -> Optional[str]:
+    """
+    Return remote if provided, else local. (Convenience for simple cases.)
+    """
+    return remote or local
+
+
 def best_image_pair(product: Dict[str, Any]) -> Tuple[Optional[str], Optional[str]]:
     """
     Return (remote_url, local_path) for the product's main image.
@@ -117,42 +111,6 @@ def best_image_pair(product: Dict[str, Any]) -> Tuple[Optional[str], Optional[st
     remote = normalize_image_url(product.get("main_image"), base)
     local = normalize_local_path(product.get("main_image_local"))
     return remote, local
-
-
-def enumerate_main_image_pairs(product: Dict[str, Any], max_images: int = 6) -> List[Tuple[Optional[str], Optional[str]]]:
-    """
-    Build a list of candidate (remote, local) image pairs:
-      base main_image + numbered siblings: _2, _3, ..., up to max_images.
-    We don't pre-validate URLs; show_image_with_fallback will gracefully handle misses.
-    """
-    base = _infer_base_url(product)
-    remote0 = normalize_image_url(product.get("main_image"), base)
-    local0 = normalize_local_path(product.get("main_image_local"))
-    pairs: List[Tuple[Optional[str], Optional[str]]] = []
-
-    if remote0 or local0:
-        pairs.append((remote0, local0))
-    else:
-        return pairs
-
-    # If the filename already ends with '_1' we still produce _2, _3, ...
-    # Otherwise, many AchaDirect pages use base.jpg, base_2.jpg, base_3.jpg
-    # We'll always try suffixes 2..max_images.
-    for i in range(2, max_images + 1):
-        remote_i = add_suffix_before_ext(remote0, f"_{i}") if remote0 else None
-        # If local exists, try to mirror the same suffix logic locally.
-        local_i = add_suffix_before_ext(local0, f"_{i}") if local0 else None
-        pairs.append((remote_i, normalize_local_path(local_i)))
-
-    # Deduplicate identical tuples (defensive)
-    dedup: List[Tuple[Optional[str], Optional[str]]] = []
-    seen = set()
-    for pr in pairs:
-        key = (pr[0] or "", pr[1] or "")
-        if key not in seen:
-            seen.add(key)
-            dedup.append(pr)
-    return dedup
 
 
 def get_all_products(data: Dict[str, Any]) -> List[Dict[str, Any]]:
@@ -255,6 +213,7 @@ def build_variant_axes(product: Dict[str, Any]) -> List[Dict[str, Any]]:
                 for opt in options_order:
                     if opt not in bucket["options"]:
                         bucket["options"].append(opt)
+                # merge image maps
                 for k, vdict in image_map.items():
                     bucket["image_map"][k] = vdict
                 bucket["source_blocks"].append(idx)
@@ -344,15 +303,16 @@ def wishlist_add(item: Dict[str, Any]):
     """
     Add or increment an item (by SKU + selections).
     Stores both 'variant_image_remote' and 'variant_image_local' for robust display.
-    Also stores main image pair for consistent rendering in wishlist.
     """
     wl: Dict[str, Dict[str, Any]] = st.session_state["wishlist"]
     key = make_item_key(item.get("sku"), item.get("selections") or {})
     if key in wl:
         wl[key]["quantity"] = int(wl[key].get("quantity", 1)) + 1
+        # Keep the latest variant image pair if provided
         if item.get("variant_image_remote") or item.get("variant_image_local"):
             wl[key]["variant_image_remote"] = item.get("variant_image_remote") or wl[key].get("variant_image_remote")
             wl[key]["variant_image_local"] = item.get("variant_image_local") or wl[key].get("variant_image_local")
+        # Update main image pair as well
         if item.get("main_image_remote") or item.get("main_image_local"):
             wl[key]["main_image_remote"] = item.get("main_image_remote") or wl[key].get("main_image_remote")
             wl[key]["main_image_local"] = item.get("main_image_local") or wl[key].get("main_image_local")
@@ -447,17 +407,9 @@ def render_product_page(product: Dict[str, Any]):
     if tags:
         st.write("**Tags:** " + ", ".join(tags))
 
-    # --- Main images: single or slider gallery ---
-    pairs = enumerate_main_image_pairs(product, max_images=6)
-    sku = product.get("sku") or "SKU"
-    if len(pairs) > 1:
-        st.subheader("Images")
-        idx = st.slider("Image", min_value=1, max_value=len(pairs), value=1, key=f"img_slider_{sku}")
-        r, l = pairs[idx - 1]
-        show_image_with_fallback(r, l, caption=f"{idx}/{len(pairs)}", fill=True)
-    else:
-        r, l = pairs[0] if pairs else (None, None)
-        show_image_with_fallback(r, l, caption="Main image", fill=True)
+    # main product image (remote-first, local fallback)
+    main_remote, main_local = best_image_pair(product)
+    show_image_with_fallback(main_remote, main_local, caption="Main image", fill=True)
 
     # --- Variant selectors ---
     axes = build_variant_axes(product)
@@ -493,22 +445,16 @@ def render_product_page(product: Dict[str, Any]):
 
     # show the first available variant preview (often Color or Crystal Color)
     if any(variant_preview_pair):
-        show_image_with_fallback(
-            variant_preview_pair[0],
-            normalize_local_path(variant_preview_pair[1]),
-            caption="Selected option preview",
-            fill=False
-        )
+        show_image_with_fallback(variant_preview_pair[0], normalize_local_path(variant_preview_pair[1]),
+                                 caption="Selected option preview", fill=False)
 
-    # Add to wishlist (store both remote+local for robust re-display)
+    # Add to wishlist (store both remote+local pairs for robust re-display)
     def on_add():
-        # keep the first main image pair for wishlist thumbnail
-        main_remote, main_local = pairs[0] if pairs else (None, None)
         item = {
             "sku": product.get("sku"),
             "title": product.get("title") or product.get("sku"),
             "main_image_remote": main_remote,
-            "main_image_local": normalize_local_path(main_local),
+            "main_image_local": main_local,
             "url": product.get("url"),
             "selections": selections.copy(),
             "variant_image_remote": variant_preview_pair[0],
