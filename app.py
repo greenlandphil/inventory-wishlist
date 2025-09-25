@@ -381,7 +381,7 @@ def render_product_page(product: Dict[str, Any]):
             
     # variant preview image (if any)
     if variant_preview_images:
-        show_image_safe(variant_preview_images[0], caption="Selected option preview", fill=False)
+        show_image_safe(variant_preview_images[0], caption="Selected option preview", fill=True)
     
     price_info = compute_price_info(product, selections)
     if price_info:
