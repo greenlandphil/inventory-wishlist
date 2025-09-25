@@ -341,71 +341,71 @@ def render_gallery(products: List[Dict[str, Any]]):
 
 
 def render_product_page(product: Dict[str, Any]):
-    st.button("← Back to Gallery", on_click=lambda: set_page("main"))
-    st.header(product.get("title") or product.get("sku"))
-    st.write(f"**SKU:** {product.get('sku', '')}")
-    if product.get("description"):
-        st.write(product["description"])
+    st.button("← Back to Gallery", on_click=lambda: set_page("main"))
+    st.header(product.get("title") or product.get("sku"))
+    st.write(f"**SKU:** {product.get('sku', '')}")
+    if product.get("description"):
+        st.write(product["description"])
 
-    tags = product.get("tags") or []
-    if tags:
-        st.write("**Tags:** " + ", ".join(tags))
+    tags = product.get("tags") or []
+    if tags:
+        st.write("**Tags:** " + ", ".join(tags))
 
-    # main product image
-    img = best_image(product)
-    show_image_safe(img, caption="Main image", fill=True)
+    # main product image
+    img = best_image(product)
+    show_image_safe(img, caption="Main image", fill=True)
 
-    # --- Variant selectors ---
-    axes = build_variant_axes(product)
-    selections: Dict[str, str] = {}
-    variant_preview_images: List[str] = []
+    # --- Variant selectors ---
+    axes = build_variant_axes(product)
+    selections: Dict[str, str] = {}
+    variant_preview_images: List[str] = []
 
-    if axes:
-        st.subheader("Select options")
-    for ax in axes:
-        label = ax["label"]
-        options = ax["options"] or ["Unspecified"]
-        key = f"sel_{product.get('sku')}_{label}"
-        if key not in st.session_state:
-            st.session_state[key] = options[0]
-        chosen = st.selectbox(
-            label,
-            options,
-            index=options.index(st.session_state[key]) if st.session_state[key] in options else 0,
-            key=key,
-        )
-        selections[label] = chosen
-        img_map = ax.get("image_map") or {}
-        vimg = img_map.get(chosen)
-        if vimg:
-            variant_preview_images.append(vimg)
-            
-    # variant preview image (if any)
-    if variant_preview_images:
-        show_image_safe(variant_preview_images[0], caption="Selected option preview", fill=False)
-    
-    price_info = compute_price_info(product, selections)
-    if price_info:
-        st.markdown("**Price info (from selection):**")
-        for k, v in price_info.items():
-            st.write(f"- {k}: {v}")
+    if axes:
+        st.subheader("Select options")
+    for ax in axes:
+        label = ax["label"]
+        options = ax["options"] or ["Unspecified"]
+        key = f"sel_{product.get('sku')}_{label}"
+        if key not in st.session_state:
+            st.session_state[key] = options[0]
+        chosen = st.selectbox(
+            label,
+            options,
+            index=options.index(st.session_state[key]) if st.session_state[key] in options else 0,
+            key=key,
+        )
+        selections[label] = chosen
+        img_map = ax.get("image_map") or {}
+        vimg = img_map.get(chosen)
+        if vimg:
+            variant_preview_images.append(vimg)
+            
+    # variant preview image (if any)
+    if variant_preview_images:
+        # **FIX APPLIED HERE**
+        show_image_safe(variant_preview_images[0], caption="Selected option preview", fill=True) 
+    
+    price_info = compute_price_info(product, selections)
+    if price_info:
+        st.markdown("**Price info (from selection):**")
+        for k, v in price_info.items():
+            st.write(f"- {k}: {v}")
 
-    # Add to wishlist (now increments quantity if same SKU+selections exist)
-    def on_add():
-        item = {
-            "sku": product.get("sku"),
-            "title": product.get("title") or product.get("sku"),
-            "main_image": best_image(product),
-            "url": product.get("url"),
-            "selections": selections.copy(),
-            "variant_image": variant_preview_images[0] if variant_preview_images else None,
-            "price_info": price_info,
-        }
-        wishlist_add(item)
-        st.success("Added to wishlist!")
+    # Add to wishlist (now increments quantity if same SKU+selections exist)
+    def on_add():
+        item = {
+            "sku": product.get("sku"),
+            "title": product.get("title") or product.get("sku"),
+            "main_image": best_image(product),
+            "url": product.get("url"),
+            "selections": selections.copy(),
+            "variant_image": variant_preview_images[0] if variant_preview_images else None,
+            "price_info": price_info,
+        }
+        wishlist_add(item)
+        st.success("Added to wishlist!")
 
-    st.button("➕ Add to Wishlist", type="primary", on_click=on_add)
-
+    st.button("➕ Add to Wishlist", type="primary", on_click=on_add)
 
 def render_wishlist():
     st.button("← Back to Gallery", on_click=lambda: set_page("main"))
