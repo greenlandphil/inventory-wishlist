@@ -34,7 +34,7 @@ def load_products(path: str = "products.json") -> Dict[str, Any]:
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
-def show_image_safe(img: Optional[str], caption: Optional[str] = None, fill: bool = True):
+def show_image_safe(img: Optional[str], caption: Optional[str] = None, fill: bool = True. width: Optional[int] = None):
     """
     Safe wrapper around st.image that tolerates None/invalid images.
     - If img is falsy, shows a subtle placeholder instead of crashing.
@@ -45,7 +45,10 @@ def show_image_safe(img: Optional[str], caption: Optional[str] = None, fill: boo
         st.caption("🖼️ Image not available")
         return
     try:
-        st.image(img, use_container_width=fill, caption=caption)
+        if width is not None:
+            st.image(img, width=width, caption=caption)
+        else:
+            st.image(img, use_container_width=fill, caption=caption)
     except Exception:
         st.caption("🖼️ Image failed to load")
 
@@ -383,9 +386,14 @@ def render_product_page(product: Dict[str, Any]):
             variant_preview_images.append(vimg)
             
     # variant preview image (if any)
-    if variant_preview_images:
-        show_image_safe(variant_preview_images[0], caption="Selected option preview", fill=False)
-    
+    if variant_preview_images:
+        # FIX: Use a fixed width (e.g., 100px) instead of fill=False to stabilize loading remote swatches.
+        show_image_safe(
+            variant_preview_images[0], 
+            caption="Selected option preview", 
+            fill=False, # <-- Keep fill=False to prevent stretching, but...
+            width=100  # <-- ...use a fixed width.
+        )    
     price_info = compute_price_info(product, selections)
     if price_info:
         st.markdown("**Price info (from selection):**")
