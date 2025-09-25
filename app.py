@@ -384,16 +384,13 @@ def render_product_page(product: Dict[str, Any]):
         vimg = img_map.get(chosen)
         if vimg:
             variant_preview_images.append(vimg)
-            
-    # variant preview image (if any)
-    if variant_preview_images:
-        # FIX: Use a fixed width (e.g., 100px) instead of fill=False to stabilize loading remote swatches.
-        show_image_safe(
-            variant_preview_images[0], 
-            caption="Selected option preview", 
-            fill=False, # <-- Keep fill=False to prevent stretching, but...
-            width=100  # <-- ...use a fixed width.
-        )    
+    if variant_preview_images:
+        show_image_safe(
+            variant_preview_images[0],
+            caption="Selected option preview",
+            fill=false,
+            width=100
+        )
     price_info = compute_price_info(product, selections)
     if price_info:
         st.markdown("**Price info (from selection):**")
