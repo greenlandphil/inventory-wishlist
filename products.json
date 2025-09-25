@@ -1,0 +1,779 @@
+{
+  "metadata": {
+    "scraped_at": "2025-09-25T14:48:16.465653",
+    "total_products": 8,
+    "source": "AchaDirect",
+    "scraper_version": "async_v3.1_multi_image",
+    "base_url": "https://www.achadirect.com"
+  },
+  "products": [
+    {
+      "sku": "BLK07",
+      "url": "https://www.achadirect.com/blk07",
+      "scraped_at": "2025-09-25T14:48:09.644099",
+      "title": "Bulk body jewelry: 16 to 144 pcs. assortment of surgical steel flesh tunnels",
+      "description": "Bulk body jewelry: Assortment of 16, 20, 24, 30, 32, 36, 96, or 144 pcs. of 316L surgical steel flesh tunnels",
+      "tags": [
+        "Flesh Tunnels",
+        "Surgical Steel",
+        "Sold in bulk"
+      ],
+      "main_images": [
+        "https://www.achadirect.com/media/product/wholesale1_b/blk07_.jpg"
+      ],
+      "variants": [
+        {
+          "type": "variant_1",
+          "label": "BLK07",
+          "headers": [
+            "Size in pack",
+            "Price / pc",
+            "Price"
+          ],
+          "items": [
+            {
+              "Size in pack": "16 pcs - Size 28mm - 38mm"
+            },
+            {
+              "Size in pack": "16 pcs, Size 42mm - 52mm"
+            },
+            {
+              "Size in pack": "20 pcs Size 16mm - 25mm"
+            },
+            {
+              "Size in pack": "24 pcs Size 6mm - 16mm"
+            },
+            {
+              "Size in pack": "36 pcs - Size 3mm - 10mm"
+            },
+            {
+              "Size in pack": "30 pcs - Size 1.2mm - 3mm"
+            },
+            {
+              "Size in pack": "30 pcs, Size 6mm - 10mm"
+            },
+            {
+              "Size in pack": "32 pcs - Size 28mm - 52mm"
+            },
+            {
+              "Size in pack": "96 pcs - Size 1.6mm - 25mm"
+            },
+            {
+              "Size in pack": "144 pcs - Size 1.6mm - 52mm"
+            }
+          ]
+        },
+        {
+          "type": "variant_2",
+          "label": "Color",
+          "options": [
+            {
+              "name": "",
+              "image": null
+            }
+          ]
+        }
+      ],
+      "main_images_local": [
+        "images/blk07\\blk07_main_1.jpg"
+      ]
+    },
+    {
+      "sku": "BRPG81",
+      "url": "https://www.achadirect.com/brpg81",
+      "scraped_at": "2025-09-25T14:48:09.641716",
+      "title": "Board of 316L steel flesh tunnel w/ crystal studded rim",
+      "description": "Display with 24 pcs. of 316L surgical steel flesh tunnels with crystal studded rim - size 4mm to 14mm (6g to 9/16\")",
+      "tags": [
+        "Flesh Tunnels",
+        "Surgical Steel",
+        "Sold on display",
+        "Big Gauge"
+      ],
+      "main_images": [
+        "https://www.achadirect.com/media/product/wholesale1_b/brpg81_board_of_316l_steel_flesh_tunnel_w_crystal_studded_rim.jpg",
+        "https://www.achadirect.com/media/product/wholesale1_b/brpg81_board_of_316l_steel_flesh_tunnel_w_crystal_studded_rim_2.jpg",
+        "https://www.achadirect.com/media/product/wholesale1_b/brpg81_board_of_316l_steel_flesh_tunnel_w_crystal_studded_rim_3.jpg"
+      ],
+      "variants": [
+        {
+          "type": "variant_1",
+          "label": "BRPG81",
+          "headers": [
+            "Crystal Color"
+          ],
+          "items": [
+            {
+              "Crystal Color": "Clear",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/c/l/clear.gif",
+              "image_local": "images/brpg81\\brpg81_variant_1.jpg"
+            },
+            {
+              "Crystal Color": "newAB",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/a/b/ab_2.png",
+              "image_local": "images/brpg81\\brpg81_variant_2.jpg"
+            },
+            {
+              "Crystal Color": "Rose",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/r/o/rose.gif",
+              "image_local": "images/brpg81\\brpg81_variant_3.jpg"
+            },
+            {
+              "Crystal Color": "newLight Sapphire",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-sapphire.png",
+              "image_local": "images/brpg81\\brpg81_variant_4.jpg"
+            },
+            {
+              "Crystal Color": "Sapphire",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/s/a/sapphire.gif",
+              "image_local": "images/brpg81\\brpg81_variant_5.jpg"
+            },
+            {
+              "Crystal Color": "Aquamarine",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/a/q/aquamarine.png",
+              "image_local": "images/brpg81\\brpg81_variant_6.jpg"
+            },
+            {
+              "Crystal Color": "newBlue Zircon",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/b/l/blue-zircon.gif",
+              "image_local": "images/brpg81\\brpg81_variant_7.jpg"
+            },
+            {
+              "Crystal Color": "newCapri Blue",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/c/a/capri-blue.png",
+              "image_local": "images/brpg81\\brpg81_variant_8.jpg"
+            },
+            {
+              "Crystal Color": "newLight Amethyst",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-amethyst.png",
+              "image_local": "images/brpg81\\brpg81_variant_9.jpg"
+            },
+            {
+              "Crystal Color": "newAmethyst",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/a/m/amethyst.png",
+              "image_local": "images/brpg81\\brpg81_variant_10.jpg"
+            },
+            {
+              "Crystal Color": "Jet",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/j/e/jet.gif",
+              "image_local": "images/brpg81\\brpg81_variant_11.jpg"
+            },
+            {
+              "Crystal Color": "Fuchsia",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/f/u/fuchsia.gif",
+              "image_local": "images/brpg81\\brpg81_variant_12.jpg"
+            },
+            {
+              "Crystal Color": "newLight Siam",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-siam.png",
+              "image_local": "images/brpg81\\brpg81_variant_13.jpg"
+            },
+            {
+              "Crystal Color": "newHyacinth",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/h/y/hyacinth.png",
+              "image_local": "images/brpg81\\brpg81_variant_14.jpg"
+            },
+            {
+              "Crystal Color": "newCitrine",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/c/i/citrine.png",
+              "image_local": "images/brpg81\\brpg81_variant_15.jpg"
+            },
+            {
+              "Crystal Color": "newGarnet",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/g/a/garnet.gif",
+              "image_local": "images/brpg81\\brpg81_variant_16.jpg"
+            },
+            {
+              "Crystal Color": "newTopaz",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/t/o/topaz.gif",
+              "image_local": "images/brpg81\\brpg81_variant_17.jpg"
+            },
+            {
+              "Crystal Color": "newPeridot",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/p/e/peridot.png",
+              "image_local": "images/brpg81\\brpg81_variant_18.jpg"
+            },
+            {
+              "Crystal Color": "newEmerald",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/e/m/emerald.png",
+              "image_local": "images/brpg81\\brpg81_variant_19.jpg"
+            },
+            {
+              "Crystal Color": "Rainbow",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/r/b/rb_1.png",
+              "image_local": "images/brpg81\\brpg81_variant_20.jpg"
+            },
+            {
+              "Crystal Color": "Clear / Jet",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/c/l/clear_jet_1.png",
+              "image_local": "images/brpg81\\brpg81_variant_21.jpg"
+            }
+          ]
+        },
+        {
+          "type": "variant_2",
+          "label": "Color",
+          "options": [
+            {
+              "name": "",
+              "image": null
+            }
+          ]
+        }
+      ],
+      "main_images_local": [
+        "images/brpg81\\brpg81_main_1.jpg",
+        "images/brpg81\\brpg81_main_2.jpg",
+        "images/brpg81\\brpg81_main_3.jpg"
+      ]
+    },
+    {
+      "sku": "18BMOS20",
+      "url": "https://www.achadirect.com/18bmos20",
+      "scraped_at": "2025-09-25T14:48:09.644073",
+      "title": "18k Gold Plated Silver Nose Bones Round Crystals",
+      "description": "18k gold plated 925 sterling silver nose bones, 0.6mm (22g) with three round crystals set to form a mouse face / 20 pcs per display box (in standard packing or in vacuum sealed packing to prevent tarnishing)",
+      "tags": [
+        "Nose Bones",
+        "925 Silver",
+        "Sold on display"
+      ],
+      "main_images": [
+        "https://www.achadirect.com/media/product/wholesale1_b/18bmos20-18k-gold-plated-silver-nose-bones-round-crystals.jpg"
+      ],
+      "variants": [
+        {
+          "type": "variant_1",
+          "label": "18BMOS20",
+          "headers": [
+            "Packing Option",
+            "Price / pc",
+            "Price"
+          ],
+          "items": [
+            {
+              "Packing Option": "Standard Package"
+            },
+            {
+              "Packing Option": "Vacuum Sealed Packing to prevent tarnishing"
+            }
+          ]
+        },
+        {
+          "type": "variant_2",
+          "label": "Color",
+          "options": [
+            {
+              "name": "",
+              "image": null
+            }
+          ]
+        }
+      ],
+      "main_images_local": [
+        "images/18bmos20\\18bmos20_main_1.jpg"
+      ]
+    },
+    {
+      "sku": "BBE2FBIN",
+      "url": "https://www.achadirect.com/bbe2fbin",
+      "scraped_at": "2025-09-25T14:48:09.643982",
+      "title": "Internally threaded steel  barbel w flat back crystal",
+      "description": "Internally threaded 316L surgical steel barbell, 1.2mm (16g) with flat back crystal on both ends",
+      "tags": [
+        "Barbells",
+        "Surgical Steel",
+        "Sold per piece",
+        "16g",
+        "Internally Threaded"
+      ],
+      "variants": [
+        {
+          "type": "variant_1",
+          "label": "BBE2FBIN",
+          "headers": [
+            "Length",
+            "Price"
+          ],
+          "items": [
+            {
+              "Length": "6mm with 3mm Top"
+            },
+            {
+              "Length": "8mm with 3mm Top"
+            },
+            {
+              "Length": "10mm with 3mm Top"
+            },
+            {
+              "Length": "6mm with 4mm Top"
+            },
+            {
+              "Length": "8mm with 4mm Top"
+            },
+            {
+              "Length": "10mm with 4mm Top"
+            },
+            {
+              "Length": "6mm with 5mm Top"
+            },
+            {
+              "Length": "8mm with 5mm Top"
+            },
+            {
+              "Length": "10mm with 5mm Top"
+            }
+          ]
+        },
+        {
+          "type": "variant_2",
+          "label": "Color",
+          "options": [
+            {
+              "name": "Clear",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/c/l/clear.gif",
+              "image_local": "images/bbe2fbin\\bbe2fbin_clear.jpg"
+            },
+            {
+              "name": "AB",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/a/b/ab_2.png",
+              "image_local": "images/bbe2fbin\\bbe2fbin_ab.jpg"
+            },
+            {
+              "name": "Rose",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/r/o/rose.gif",
+              "image_local": "images/bbe2fbin\\bbe2fbin_rose.jpg"
+            },
+            {
+              "name": "Light Sapphire",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-sapphire.png",
+              "image_local": "images/bbe2fbin\\bbe2fbin_light_sapphire.jpg"
+            },
+            {
+              "name": "Sapphire",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/s/a/sapphire.gif",
+              "image_local": "images/bbe2fbin\\bbe2fbin_sapphire.jpg"
+            },
+            {
+              "name": "Aquamarine",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/a/q/aquamarine.png",
+              "image_local": "images/bbe2fbin\\bbe2fbin_aquamarine.jpg"
+            },
+            {
+              "name": "Blue Zircon",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/b/l/blue-zircon.gif",
+              "image_local": "images/bbe2fbin\\bbe2fbin_blue_zircon.jpg"
+            },
+            {
+              "name": "Light Amethyst",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-amethyst.png",
+              "image_local": "images/bbe2fbin\\bbe2fbin_light_amethyst.jpg"
+            },
+            {
+              "name": "Amethyst",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/a/m/amethyst.png",
+              "image_local": "images/bbe2fbin\\bbe2fbin_amethyst.jpg"
+            },
+            {
+              "name": "Jet",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/j/e/jet.gif",
+              "image_local": "images/bbe2fbin\\bbe2fbin_jet.jpg"
+            },
+            {
+              "name": "Fuchsia",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/f/u/fuchsia.gif",
+              "image_local": "images/bbe2fbin\\bbe2fbin_fuchsia.jpg"
+            },
+            {
+              "name": "Light Siam",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light-siam.png",
+              "image_local": "images/bbe2fbin\\bbe2fbin_light_siam.jpg"
+            },
+            {
+              "name": "Hyacinth",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/h/y/hyacinth.png",
+              "image_local": "images/bbe2fbin\\bbe2fbin_hyacinth.jpg"
+            },
+            {
+              "name": "Topaz",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/t/o/topaz.gif",
+              "image_local": "images/bbe2fbin\\bbe2fbin_topaz.jpg"
+            },
+            {
+              "name": "Peridot",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/p/e/peridot.png",
+              "image_local": "images/bbe2fbin\\bbe2fbin_peridot.jpg"
+            },
+            {
+              "name": "Emerald",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/e/m/emerald.png",
+              "image_local": "images/bbe2fbin\\bbe2fbin_emerald.jpg"
+            }
+          ]
+        }
+      ],
+      "main_images": [
+        "https://www.achadirect.com/media/product/wholesale1_b/bbe2fbin_internally_threaded_steel_barbel_w_flat_back_crystal.jpg",
+        "https://www.achadirect.com/media/product/wholesale1_b/bbe2fbin_internally_threaded_steel_barbel_w_flat_back_crystal_2.jpg",
+        "https://www.achadirect.com/media/product/wholesale1_b/bbe2fbin_internally_threaded_steel_barbel_w_flat_back_crystal_3.jpg"
+      ],
+      "main_images_local": [
+        "images/bbe2fbin\\bbe2fbin_main_1.jpg",
+        "images/bbe2fbin\\bbe2fbin_main_2.jpg",
+        "images/bbe2fbin\\bbe2fbin_main_3.jpg"
+      ]
+    },
+    {
+      "sku": "BBEFRBIN",
+      "url": "https://www.achadirect.com/bbefrbin",
+      "scraped_at": "2025-09-25T14:48:09.644014",
+      "title": "Internally threaded steel  barbel flat multi crystal dot",
+      "description": "Internally threaded 316L surgical steel barbell, 1.2mm (16g) with flat top part on both ends with ferido glued multi crystals in clear color with a dot of another color in the middle and resin cover",
+      "tags": [
+        "Barbells",
+        "Surgical Steel",
+        "Sold per piece",
+        "16g",
+        "Ferido Glued",
+        "Internally Threaded"
+      ],
+      "variants": [
+        {
+          "type": "variant_1",
+          "label": "BBEFRBIN",
+          "headers": [
+            "Length",
+            "Price"
+          ],
+          "items": [
+            {
+              "Length": "6mm with 3mm Top"
+            },
+            {
+              "Length": "8mm with 3mm Top"
+            },
+            {
+              "Length": "10mm with 3mm Top"
+            },
+            {
+              "Length": "6mm with 4mm Top"
+            },
+            {
+              "Length": "8mm with 4mm Top"
+            },
+            {
+              "Length": "10mm with 4mm Top"
+            },
+            {
+              "Length": "6mm with 5mm Top"
+            },
+            {
+              "Length": "8mm with 5mm Top"
+            },
+            {
+              "Length": "10mm with 5mm Top"
+            }
+          ]
+        },
+        {
+          "type": "variant_2",
+          "label": "Color",
+          "options": [
+            {
+              "name": "# 1 in Picture",
+              "image": null
+            },
+            {
+              "name": "# 2 in Picture",
+              "image": null
+            },
+            {
+              "name": "# 3 in Picture",
+              "image": null
+            },
+            {
+              "name": "# 4 in Picture",
+              "image": null
+            },
+            {
+              "name": "# 5 in Picture",
+              "image": null
+            },
+            {
+              "name": "# 6 in Picture",
+              "image": null
+            },
+            {
+              "name": "# 7 in Picture",
+              "image": null
+            },
+            {
+              "name": "# 8 in Picture",
+              "image": null
+            },
+            {
+              "name": "# 9 in Picture",
+              "image": null
+            },
+            {
+              "name": "# 10 in Picture",
+              "image": null
+            },
+            {
+              "name": "# 11 in Picture",
+              "image": null
+            }
+          ]
+        }
+      ],
+      "main_images": [
+        "https://www.achadirect.com/media/product/wholesale1_b/bbefrbin_internally_threaded_steel_barbel_flat_multi_crystal_dot.jpg"
+      ],
+      "main_images_local": [
+        "images/bbefrbin\\bbefrbin_main_1.jpg"
+      ]
+    },
+    {
+      "sku": "BBE2OIN",
+      "url": "https://www.achadirect.com/bbe2oin",
+      "scraped_at": "2025-09-25T14:48:09.643940",
+      "title": "Internally threaded steel  barbel w synthetic opal tops",
+      "description": "Internally threaded 316L surgical steel barbell, 1.2mm (16g) with flat top part on both ends with synthetic opal tops",
+      "tags": [
+        "Barbells",
+        "Surgical Steel",
+        "Sold per piece",
+        "16g",
+        "Internally Threaded"
+      ],
+      "variants": [
+        {
+          "type": "variant_1",
+          "label": "BBE2OIN",
+          "headers": [
+            "Length",
+            "Price"
+          ],
+          "items": [
+            {
+              "Length": "6mm with 3mm Top"
+            },
+            {
+              "Length": "8mm with 3mm Top"
+            },
+            {
+              "Length": "10mm with 3mm Top"
+            },
+            {
+              "Length": "6mm with 4mm Top"
+            },
+            {
+              "Length": "8mm with 4mm Top"
+            },
+            {
+              "Length": "10mm with 4mm Top"
+            },
+            {
+              "Length": "6mm with 5mm Top"
+            },
+            {
+              "Length": "8mm with 5mm Top"
+            },
+            {
+              "Length": "10mm with 5mm Top"
+            }
+          ]
+        },
+        {
+          "type": "variant_2",
+          "label": "Color",
+          "options": [
+            {
+              "name": "Clear",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/o/p/opal_clear.png",
+              "image_local": "images/bbe2oin\\bbe2oin_clear.jpg"
+            },
+            {
+              "name": "Light Blue",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/l/i/light_blue_opal_.png",
+              "image_local": "images/bbe2oin\\bbe2oin_light_blue.jpg"
+            },
+            {
+              "name": "Green",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/g/r/green_opal.png",
+              "image_local": "images/bbe2oin\\bbe2oin_green.jpg"
+            },
+            {
+              "name": "Dark Green",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/d/a/dark_green_opal.png",
+              "image_local": "images/bbe2oin\\bbe2oin_dark_green.jpg"
+            },
+            {
+              "name": "Pink",
+              "image": "https://www.achadirect.com/media/attribute/swatch/swatch_thumb/110x90/p/i/pink_opal.png",
+              "image_local": "images/bbe2oin\\bbe2oin_pink.jpg"
+            }
+          ]
+        }
+      ],
+      "main_images": [
+        "https://www.achadirect.com/media/product/wholesale1_b/bbe2oin_internally_threaded_steel_barbel_w_synthetic_opal_tops.jpg"
+      ],
+      "main_images_local": [
+        "images/bbe2oin\\bbe2oin_main_1.jpg"
+      ]
+    },
+    {
+      "sku": "BLK109",
+      "url": "https://www.achadirect.com/blk109",
+      "scraped_at": "2025-09-25T14:48:09.643822",
+      "title": "Anodized 316L steel eyebrow banana w/ 3mm bezel jewel",
+      "description": "Bulk body jewelry: 50 pcs. assortment of PVD plated 316L surgical steel bananas, 1.2mm (16g) with two 3mm bezel set jewel balls",
+      "tags": [
+        "Eyebrow Bananas",
+        "PVD Plated Surgical Steel",
+        "Sold in bulk",
+        "16g"
+      ],
+      "variants": [
+        {
+          "type": "variant_1",
+          "label": "BLK109",
+          "headers": [
+            "Length"
+          ],
+          "items": [
+            {
+              "Length": "8mm"
+            },
+            {
+              "Length": "10mm"
+            },
+            {
+              "Length": "12mm"
+            },
+            {
+              "Length": "14mm"
+            },
+            {
+              "Length": "Assorted 8mm & 10mm"
+            },
+            {
+              "Length": "Assorted 10mm & 12mm"
+            },
+            {
+              "Length": "Assorted 10mm & 14mm"
+            },
+            {
+              "Length": "Assorted 12mm & 14mm"
+            }
+          ]
+        },
+        {
+          "type": "variant_2",
+          "label": "Color",
+          "options": [
+            {
+              "name": "",
+              "image": null
+            }
+          ]
+        }
+      ],
+      "main_images": [
+        "https://www.achadirect.com/media/product/wholesale1_b/blk109_anodized_316l_steel_eyebrow_banana_w_3mm_bezel_jewel.jpg"
+      ],
+      "main_images_local": [
+        "images/blk109\\blk109_main_1.jpg"
+      ]
+    },
+    {
+      "sku": "BLK03C",
+      "url": "https://www.achadirect.com/blk03c",
+      "scraped_at": "2025-09-25T14:48:09.644048",
+      "title": "bulk of 1.6mm 316L steel labrets with 4mm ball",
+      "description": "Bulk body jewelry: 100 pcs. assortment of 316L surgical steel labrets, 1.6mm (14g) with 4mm ball",
+      "tags": [
+        "Labrets",
+        "Surgical Steel",
+        "Sold in bulk",
+        "14g"
+      ],
+      "variants": [
+        {
+          "type": "variant_1",
+          "label": "BLK03C",
+          "headers": [
+            "Length"
+          ],
+          "items": [
+            {
+              "Length": "5mm"
+            },
+            {
+              "Length": "6mm"
+            },
+            {
+              "Length": "7mm"
+            },
+            {
+              "Length": "8mm"
+            },
+            {
+              "Length": "9mm"
+            },
+            {
+              "Length": "10mm"
+            },
+            {
+              "Length": "11mm"
+            },
+            {
+              "Length": "12mm"
+            },
+            {
+              "Length": "14mm"
+            },
+            {
+              "Length": "16mm"
+            },
+            {
+              "Length": "Assorted 6mm & 8mm"
+            },
+            {
+              "Length": "Assorted 8mm & 10mm"
+            },
+            {
+              "Length": "Assorted 10mm & 12mm"
+            },
+            {
+              "Length": "Assorted 12mm & 14mm"
+            },
+            {
+              "Length": "Assorted 14mm & 16mm"
+            },
+            {
+              "Length": "Assorted 6mm & 8mm & 10mm"
+            }
+          ]
+        },
+        {
+          "type": "variant_2",
+          "label": "Color",
+          "options": [
+            {
+              "name": "",
+              "image": null
+            }
+          ]
+        }
+      ],
+      "main_images": [
+        "https://www.achadirect.com/media/product/wholesale1_b/blk03c_bulk_of_1_6mm_316l_steel_labrets_with_4mm_ball.jpg"
+      ],
+      "main_images_local": [
+        "images/blk03c\\blk03c_main_1.jpg"
+      ]
+    }
+  ]
+}
